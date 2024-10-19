@@ -1,0 +1,12 @@
+#header {
+  height: 90px;
+  width: 100%;
+  background-color: var(--primary-color);
+  padding: 24px;
+}
+
+.navigation-option {
+    float: right;
+    color: white;
+    padding: 12px;
+}

@@ -6,7 +6,12 @@
 }
 
 .navigation-option {
-    float: right;
-    color: white;
-    padding: 12px;
+  float: right;
+  color: white;
+  padding: 12px 20px;
+  cursor: pointer;
+}
+
+.navigation-option:hover {
+  color: lightgrey;
 }

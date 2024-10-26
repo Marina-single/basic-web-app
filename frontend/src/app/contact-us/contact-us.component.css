@@ -1,0 +1,11 @@
+.parent {
+  display: flex;
+}
+
+#map {
+  padding-right: 32px;
+}
+
+.contact-element {
+  padding-bottom: 16px;
+}

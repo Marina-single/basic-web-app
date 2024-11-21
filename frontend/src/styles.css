@@ -1,4 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 :root {
   --primary-color: #003B5C;
+  --secondary-color: #0096d6;
+}
+.background-banner {
+background: linear-gradient(135deg, rgb(0, 59, 92) 12%, rgb(0, 150, 214));
 }

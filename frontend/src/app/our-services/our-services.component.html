@@ -1,0 +1,18 @@
+<div style="padding-top: 4.5vw;">
+<h2 id="our-services">Our services</h2>
+<div class="row text-center all-services">
+  <div *ngFor="let service of services" class="col-md-6 mb-4">
+    <div class="card h-100">
+      <div class="card-body d-flex flex-column flex-md-row align-items-center align-items-md-start text-center text-md-start">
+        <i [class]="service.icon" class="services-icon"></i>
+        <div style="padding-top: 8px;">
+          <h5 class="card-title">{{ service.title }}</h5>
+          <p class="card-text text-start text-md-start">{{ service.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+

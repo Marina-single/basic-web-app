@@ -1,0 +1,23 @@
+<div class="container">
+  <p><span>Our mission?</span> All services from a single source—simple and straightforward! Whether you need help finding the perfect apartment, applying for the right visa, or getting settled into your new surroundings—we have everything you need! Say goodbye to the exhausting search for different providers: with us, you’ll receive comprehensive service that paves the way for you.</p>
+  <p><span>With 1source-Relocation, you’re not just a client </span> you’re an important part of our journey! Our dedicated team brings not only expertise but also passion to make sure your move is smooth and enjoyable. We understand that every journey is unique, and we’re here to help shape your individual story.</p>
+  <p><span>And the best part? </span> We make the relocation process an unforgettable experience! Let’s discover the exciting opportunities that lie ahead together. At 1source, you can focus on what truly matters: your new adventure!</p>
+</div>
+
+<div class="stats">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-md-3"  *ngFor="let item of advantages">
+        <div class="stat-item" style="padding-left:40px;">
+          <div class="icon-wrapper" style="padding-bottom:30px;">
+            <i class="bi" [ngClass]="item.icon"></i>
+          </div>
+          <h6 style="color: var(--primary-color); font-size:20px; padding-bottom:10px;">{{ item.title }}</h6>
+          <p>{{ item.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+

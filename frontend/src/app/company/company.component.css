@@ -1,0 +1,47 @@
+.container{
+  padding-top:60px;
+  text-align: left;
+}
+p{
+  margin: 0 0 2em;
+}
+
+span{
+  font-weight: bold;
+  color:var(--primary-color);
+  font-size:18px;
+}
+
+
+.icon-wrapper i {
+  font-size: 3.5rem;
+  color: var(--primary-color);
+}
+.stats{
+  background-color: #E5EBEE;
+}
+@media (max-width: 1000px) {
+.icon-wrapper i {
+  font-size: 2.5rem;
+}
+.container {
+  padding:20px 0px 20px 0px;
+}
+}
+@media (max-width: 680px) {
+.icon-wrapper i {
+  font-size: 2.5rem;
+}
+.container {
+  padding:20px;
+}
+}
+
+@media (max-width: 460px) {
+.icon-wrapper i {
+  font-size: 2.5rem;
+}
+.container {
+  padding:20px;
+}
+}

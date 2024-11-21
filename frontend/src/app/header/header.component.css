@@ -1,17 +1,24 @@
 #header {
-  height: 90px;
+  height: 350px;
   width: 100%;
-  background-color: var(--primary-color);
   padding: 24px;
 }
 
 .navigation-option {
+  text-decoration: none;
   float: right;
   color: white;
   padding: 12px 20px;
   cursor: pointer;
+  transition: color 0.3s ease;
 }
 
 .navigation-option:hover {
   color: lightgrey;
+}
+
+.slogan{
+  padding-top:160px;
+  padding-left: 50px;
+  color:white;
 }

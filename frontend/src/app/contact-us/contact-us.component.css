@@ -1,11 +1,101 @@
-.parent {
-  display: flex;
+.contact-container{
+  background-color:#E5EBEE;
 }
 
-#map {
-  padding-right: 32px;
+.parent{
+  padding-top: 2.5vw;
+  padding-bottom: 5.5vw;
+  display: flex;
+  justify-content: center;
+}
+
+#contact-form{
+  padding: 30px;
+  background-color: white;
+}
+
+label {
+  display: block;
+  text-decoration: none;
+  font-size: 14px;
+  color: var(--primary-color);
+}
+textarea{
+  height:100px;
+  width: 100%;
+  border: 1px solid #E5EBEE;
+  border-radius: 4px;
+  background-color: #E5EBEE;
+}
+
+input{
+  width: 100%;
+  border: 1px solid #E5EBEE;
+  border-radius: 4px;
+  background-color: #E5EBEE;
+  height: 40px;
+}
+
+.contact-el{
+  padding-bottom:20px;
+}
+
+button {
+  float:right;
+  padding: 6px 40px;
+  border: none;
+  border-radius: 6px;
+  color:white;
+  background-color: var(--primary-color);
+}
+
+button:hover{
+  background-color: var(--secondary-color)
+}
+
+#email-phone-address {
+  padding:30px;
+  color: white;
+
 }
 
 .contact-element {
   padding-bottom: 16px;
+
 }
+
+#contact-us {
+  text-align: center;
+
+}
+
+.phone-number {
+  font-weight:bold;
+  font-size: 16px;
+}
+.mail{
+  font-size: 14px;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+
+}
+.support24 {
+  font-size: 14px;
+  font-weight: normal;
+  font-style: italic;
+}
+
+.address{
+  font-size: 14px;
+}
+@media (min-width: 900px) {
+    #email-phone-address{
+        width: 30%;
+
+    }
+   #contact-form{
+            width: 50%;
+
+        }
+   }

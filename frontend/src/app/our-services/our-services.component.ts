@@ -13,7 +13,7 @@ services = [
     {
       icon: 'bi bi-passport',
       title: 'Immigration',
-      description: 'Residence and work permits for Germany - from the application to the collection of the residence card. 1Source-Relocation provides you with the necessary information. Whether an EU Blue Card for executives or a work permit for a trainee from a third country – 1Source-Relocation is at your side.'
+      description: 'Residence and work permits for Germany - from the application to the collection of the residence card. One-Source Relocation provides you with the necessary information. Whether an EU Blue Card for executives or a work permit for a trainee from a third country – One-Source Relocation is at your side.'
     },
     {
       icon: 'bi  bi-geo-alt',
@@ -28,7 +28,7 @@ services = [
     {
       icon: 'bi bi-people',
       title: 'Family support',
-      description: 'When the whole family goes on assignment, the children’s education and the choice of school play a very important role.We at 1Source-Relocation know how important it is that both parents and children feel comfortable at the new school and that it fits the needs of the child concerned, especially as schools are not only a place for education, but much more also the place where the children spend most of their day and find new friends.'
+      description: 'When the whole family goes on assignment, the children’s education and the choice of school play a very important role.We at One-Source Relocation know how important it is that both parents and children feel comfortable at the new school and that it fits the needs of the child concerned, especially as schools are not only a place for education, but much more also the place where the children spend most of their day and find new friends.'
     },
     {
       icon: 'bi bi-globe',

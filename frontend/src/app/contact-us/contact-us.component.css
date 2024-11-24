@@ -1,15 +1,15 @@
-.contact-container{
+.contact-container {
   background-color:#E5EBEE;
 }
 
-.parent{
+.parent {
   padding-top: 2.5vw;
   padding-bottom: 5.5vw;
   display: flex;
   justify-content: center;
 }
 
-#contact-form{
+#contact-form {
   padding: 30px;
   background-color: white;
 }
@@ -20,7 +20,8 @@ label {
   font-size: 14px;
   color: var(--primary-color);
 }
-textarea{
+
+textarea {
   height:100px;
   width: 100%;
   border: 1px solid #E5EBEE;
@@ -28,7 +29,7 @@ textarea{
   background-color: #E5EBEE;
 }
 
-input{
+input {
   width: 100%;
   border: 1px solid #E5EBEE;
   border-radius: 4px;
@@ -36,8 +37,8 @@ input{
   height: 40px;
 }
 
-.contact-el{
-  padding-bottom:20px;
+.contact-el {
+  padding-bottom: 20px;
 }
 
 button {

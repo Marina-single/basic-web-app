@@ -1,5 +1,6 @@
 .container{
-  padding-top:60px;
+  padding-top:4em;
+  padding-bottom:2em;
   text-align: left;
 }
 p{
@@ -15,11 +16,12 @@ span{
 
 .icon-wrapper i {
   font-size: 3.5rem;
-  color: var(--primary-color);
+  color: #01648b;
 }
 .stats{
   background-color: #E5EBEE;
 }
+
 @media (max-width: 1000px) {
 .icon-wrapper i {
   font-size: 2.5rem;

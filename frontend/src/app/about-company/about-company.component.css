@@ -3,11 +3,8 @@
   padding-bottom: 2.5vw;
   padding-top: 2em;
  }
-
-.menu-item{
-
-  cursor: pointer;
-  font-size: 20px;
+span{
   font-weight: bold;
-  color: #01648b;
+  color:#01648b;
+  font-size:18px;
 }

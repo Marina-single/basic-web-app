@@ -1,29 +1,50 @@
-<h2 id="our-company" class="mb-4 text-center">Our Company</h2>
+<h2 id="our-company">Our company</h2>
 <div class="container" style="padding-bottom: 2.5vw;">
-  <div class="row g-4">
+  <div class="row" style="padding-bottom: 2.5vw;">
 
-    <div class="col-md-3 col-12 menu d-flex flex-column align-items-md-start align-items-center">
-      <p
-        class="menu-item"
-        (click)="updateContent('info')"
-        [class.active]="selectedSection === 'info'">
-        About company
-      </p>
-      <p
-        class="menu-item"
-        (click)="updateContent('team')"
-        [class.active]="selectedSection === 'team'">
-        Our team
-      </p>
+
+    <div class="col-md-3 col-12 mb-3 text-center">
+      <h2 style="color: #01648b; font-size:25px;">About company</h2>
     </div>
 
 
-    <div class="col-md-8 col-12 content text-md-start ">
-      <div>
-        <p *ngFor="let paragraph of sectionContent" class="mb-4">
-          {{ paragraph }}
-        </p>
+    <div class="col-md-9 col-12">
+      <div class="info container">
+        <p>In 2023, three passionate professionals—Peter, Elena, and Konstantin—founded 1Source Relocation with a shared
+          mission: to support people as they embark on a new chapter in life. Drawing from their personal experiences
+          with
+          migration and immigration, they deeply understand the challenges faced by migrants and expats and bring a
+          wealth
+          of unique skills and perspectives to the company.</p>
+
+        <p>1Source Relocation is more than just a service provider; it’s a trusted resource for anyone starting fresh in
+          Hamburg or elsewhere. Our team combines expertise with empathy to deliver tailored solutions that make the
+          transition to a new life as smooth as possible.</p>
+
+        <p>We believe that every move is an opportunity—an invitation to explore an exciting new world. That’s why we go
+          beyond addressing practical matters like finding a home or navigating administrative processes. We also
+          provide
+          emotional support, helping our clients feel at home in their new environment.</p>
+
+        <p>Choose 1Source Relocation and experience a partnership built on trust and understanding. Together, let’s make
+          your new chapter a resounding success!</p>
       </div>
     </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-3 col-12 mb-3 text-center">
+      <h6 style="color: #01648b; font-size:25px;">Team</h6>
+    </div>
+    <div class="col-md-9 col-12">
+      <div class="info container">
+        <p style="padding-bottom: 1vw;"> <span>Peter Hanssen</span>, a Hamburg native, is an experienced relocation and immigration expert. With a Master’s in Financial Management from Newcastle and over 10 years in international business, he combines local expertise with strong intercultural skills. Fluent in English, Russian, and German, Peter provides tailored support for international clients in Hamburg.</p>
+
+        <p style="padding-bottom: 1vw;"><span>Elena Aradovskaya</span>, originally from Uzbekistan, moved to Hamburg 25 years ago. With a Bachelor’s in Business Administration and fluency in English, German, Russian, and Spanish, she provides tailored support for international clients. Her personal experience and expertise make her a valuable guide for newcomers adapting to life in Hamburg..</p>
+
+        <p> <span>Konstantin Manburg</span> has extensive experience in logistics and international trade, supported by a degree in Socioeconomics and IT training. At Omicron Handelsgesellschaft, he manages projects, contracts, planning, and team leadership in the medical technology sector. His work with global clients strengthens his international communication skills and highlights his initiative and confidence.</p>
+      </div>
+    </div>
+
   </div>
 </div>

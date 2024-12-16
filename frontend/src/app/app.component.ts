@@ -6,7 +6,7 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { OurServicesComponent } from './our-services/our-services.component';
 import { FooterComponent } from './footer/footer.component';
 import { CompanyComponent } from './company/company.component';
-
+import { AboutCompanyComponent } from './about-company/about-company.component';
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -17,7 +17,8 @@ import { CompanyComponent } from './company/company.component';
     ContactUsComponent,
     OurServicesComponent,
     FooterComponent,
-    CompanyComponent
+    CompanyComponent,
+    AboutCompanyComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'

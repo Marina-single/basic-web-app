@@ -1,0 +1,29 @@
+<h2 id="our-company" class="mb-4 text-center">Our Company</h2>
+<div class="container" style="padding-bottom: 2.5vw;">
+  <div class="row g-4">
+
+    <div class="col-md-3 col-12 menu d-flex flex-column align-items-md-start align-items-center">
+      <p
+        class="menu-item"
+        (click)="updateContent('info')"
+        [class.active]="selectedSection === 'info'">
+        About company
+      </p>
+      <p
+        class="menu-item"
+        (click)="updateContent('team')"
+        [class.active]="selectedSection === 'team'">
+        Our team
+      </p>
+    </div>
+
+
+    <div class="col-md-8 col-12 content text-md-start ">
+      <div>
+        <p *ngFor="let paragraph of sectionContent" class="mb-4">
+          {{ paragraph }}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

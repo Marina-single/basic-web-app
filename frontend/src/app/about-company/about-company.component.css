@@ -1,0 +1,13 @@
+#our-company {
+  text-align: center;
+  padding-bottom: 2.5vw;
+  padding-top: 2em;
+ }
+
+.menu-item{
+
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+  color: #01648b;
+}

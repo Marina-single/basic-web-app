@@ -1,0 +1,162 @@
+
+.info-text{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  top: 0px;
+  left:0;
+  width: 100%;
+  z-index: 11;
+  bottom:0;
+  right:0;
+  padding-left: 100px;
+}
+
+.info-title {
+  color:white;
+  font-size:60px;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-transform: uppercase;
+  padding-bottom: 20px;
+  letter-spacing: 3px;
+  font-weight: 600;
+
+}
+
+.info-button{
+  cursor:pointer;
+  border-radius: 6px;
+  color:white;
+  padding: 10px 60px;
+  font-size:15px;
+  position: relative;
+}
+
+.info-button::after{
+
+  display:inline-block;
+  content: '>';
+  position: absolute;
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
+  right: 20px;
+  left: auto;
+
+}
+
+.info-button:hover::after {
+  opacity: 1;
+  right: 15px;
+
+}
+
+
+.contact-form {
+  position: absolute;
+  top: 70%;
+  left:65%;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 0 30px;
+  overflow: hidden;
+}
+
+.form-titel{
+  color: #000;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 5px 80px;
+  margin-bottom: 0;
+  background-color: lightgray;
+
+}
+
+.form-option{
+  display: flex;
+  gap:20px;
+  flex-direction: column;
+  padding:30px 20px;
+}
+
+.button1 {
+  border: none;
+  border-radius: 6px;
+  color:white;
+  padding: 8px 100px;
+  cursor:pointer;
+  z-index: 12;
+  font-size:15px;
+ }
+
+.button1::after{
+
+  display:inline-block;
+  content: '>';
+  position: absolute;
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
+  right: 20px;
+  left: auto;
+
+}
+
+.button1:hover::after {
+  opacity: 1;
+  right: 35px;
+
+}
+
+.button2 {
+   border: 2px solid var(--primary-color);
+   border-radius: 6px;
+   color:white;
+   padding: 8px 100px;
+   position: relative;
+   color:var(--primary-color);
+   cursor:pointer;
+   z-index: 12;
+   font-size:15px;
+
+ }
+
+.button2::after{
+
+  display:inline-block;
+  content: '>';
+  position: absolute;
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
+  right: 20px;
+  left: auto;
+
+}
+
+.button2:hover::after {
+  opacity: 1;
+  right: 15px;
+
+}
+
+@media (max-width: 992px) {
+
+ .contact-form {
+     position: static ;
+     width: 80%;
+     margin: 0px 15px 0;
+   }
+
+   .carousel-container {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+   }
+
+   .info-text{
+     text-align: center;
+     padding-left: 0px;
+
+
+
+   }
+}
+

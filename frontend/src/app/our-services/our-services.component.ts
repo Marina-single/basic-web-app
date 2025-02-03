@@ -1,10 +1,14 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import {HostListener } from '@angular/core';
+import { Router, NavigationEnd } from '@angular/router';
+import { filter } from 'rxjs';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-our-services',
   standalone: true,
-  imports: [ CommonModule ],
+  imports: [ CommonModule, RouterModule ],
   templateUrl: './our-services.component.html',
   styleUrl: './our-services.component.css'
 })

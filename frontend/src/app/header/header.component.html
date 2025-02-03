@@ -1,30 +1,45 @@
-<div id="header" class="background-banner ">
-  <div class=" container">
+<div class="pre-header">
+  <div class="pre-header-container">
+    <div class="contact-number"><i class="bi bi-telephone-fill"> </i> +49 176 30430423</div>
+    <div class="contact-mail"><i class="bi bi-envelope-fill"> </i> info&#64;1source-relocation.de</div>
+  </div>
+  <div class="contact-btn background-banner"> <a href="#contact-us">Write to us</a> </div>
+</div>
 
-    <nav class="navbar navbar-expand-lg navbar-light d-flex justify-content-between w-100">
+<div id="header">
+  <nav class="navbar navbar-expand-lg navbar-light d-flex justify-content-between w-100">
 
-      <div class="logo">
-        <a href="#header">
-          <img src="logo.png" alt="logo">
-        </a>
-      </div>
+    <div class="logo">
+      <a routerLink="/" routerLinkActive="active">
+        <img src="logo1.png" alt="logo" style="height:60px;">
+      </a>
+    </div>
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
 
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <div class="navbar-nav ms-auto gap-3">
-          <a class="navigation-option nav-link" href="#our-services">Our services</a>
-          <a class="navigation-option nav-link" href="#our-company">Our company</a>
-          <a class="navigation-option nav-link" href="#contact-us">Contact us</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <div class="navbar-nav ms-auto gap-3">
+        <div class="nav-item dropdown">
+          <a class="navigation-option nav-link dropdown-toggle"
+             id="servicesDropdown"
+             role="button"
+             data-bs-toggle="dropdown"
+             aria-expanded="false">Our services</a>
+          <div class="dropdown-menu" aria-labelledby="servicesDropdown">
+            <div class="dropdown-item" routerLink= "/immigration" >Immigration</div>
+            <div class="dropdown-item" href="#">Settling-in</div>
+            <div class="dropdown-item" href="#">Home Search</div>
+            <div class="dropdown-item" href="#">Family support</div>
+            <div class="dropdown-item" href="#">Intercultural Service</div>
+            <div class="dropdown-item" href="#">Individual needs</div>
+          </div>
         </div>
+        <a class="navigation-option nav-link" routerLink="/about" routerLinkActive="active">Our company</a>
+        <a class="navigation-option nav-link" href="#contact-us">Contact us</a>
       </div>
-    </nav>
-  </div>
-
-  <div class="slogan container">
-    <h2>Welcome to One-Source Relocation! </h2>
-    <p>Your perfect partner for relocation and immigration services from Hamburg</p>
-  </div>
+    </div>
+  </nav>
 </div>

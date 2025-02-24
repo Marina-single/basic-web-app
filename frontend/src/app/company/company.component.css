@@ -1,18 +1,18 @@
-.container{
+.info{
   padding-top:4em;
   padding-bottom:2em;
   text-align: left;
 }
+
+.advantage{
+  padding-top:2em;
+  padding-bottom:2em;
+  text-align: left;
+}
+
 p{
   margin: 0 0 2em;
 }
-
-span{
-  font-weight: bold;
-  color:var(--primary-color);
-  font-size:18px;
-}
-
 
 .icon-wrapper i {
   font-size: 3.5rem;

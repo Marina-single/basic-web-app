@@ -1,15 +1,15 @@
 
-.info-text{
+.info-container{
   position: absolute;
   display: flex;
   align-items: center;
-  top: 0px;
-  left:0;
+  justify-content: flex-start;
+  top: 0;
+  left: 0;
   width: 100%;
-  z-index: 11;
-  bottom:0;
-  right:0;
-  padding-left: 100px;
+  height: 100%;
+  padding: 100px;
+  text-align: left;
 }
 
 .info-title {
@@ -53,8 +53,9 @@
 
 .contact-form {
   position: absolute;
-  top: 70%;
+  top: 75%;
   left:65%;
+  transform: translateY(-75%);
   background-color: white;
   border-radius: 15px;
   box-shadow: 0 0 30px;
@@ -78,11 +79,16 @@
   padding:30px 20px;
 }
 
+a{
+  text-decoration: none;
+}
+
 .button1 {
   border: none;
   border-radius: 6px;
   color:white;
   padding: 8px 100px;
+  position: relative;
   cursor:pointer;
   z-index: 12;
   font-size:15px;
@@ -102,7 +108,7 @@
 
 .button1:hover::after {
   opacity: 1;
-  right: 35px;
+  right: 20px;
 
 }
 
@@ -133,16 +139,23 @@
 
 .button2:hover::after {
   opacity: 1;
-  right: 15px;
+  right: 20px;
 
 }
+
+.carousel-container {
+    max-height: 650px;
+    overflow: hidden;
+}
+
 
 @media (max-width: 992px) {
 
  .contact-form {
      position: static ;
      width: 80%;
-     margin: 0px 15px 0;
+     top: 25%;
+     transform: translateY(-25%);
    }
 
    .carousel-container {
@@ -154,9 +167,13 @@
    .info-text{
      text-align: center;
      padding-left: 0px;
-
-
-
+     top: 0px;
+     transform: none;
    }
+
+   .info-title {
+    font-size: 35px;
+   }
+
 }
 

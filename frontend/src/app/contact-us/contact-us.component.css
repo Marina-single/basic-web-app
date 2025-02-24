@@ -1,10 +1,14 @@
 .contact-container {
   background-color:#E5EBEE;
+
+}
+#contact-us{
+  padding-top:1em;
 }
 
 .parent {
-  padding-top: 2.5vw;
-  padding-bottom: 5.5vw;
+  padding-top: 2em;
+  padding-bottom: 5em;
   display: flex;
   justify-content: center;
 }

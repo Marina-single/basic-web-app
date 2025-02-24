@@ -1,6 +1,23 @@
 #immigration {
   text-align: center;
   color:white;
-  padding-top:5vw;
-  padding-bottom:5vw;
+  padding-top:2vw;
+  padding-bottom:2vw;
 }
+
+i{
+  color: var(--secondary-color);
+  padding-right:10px;
+ }
+
+.immigration-container{
+  padding-top: 4em;
+  padding-bottom:4em;
+}
+
+.advantages{
+
+  padding-top:2em;
+}
+
+

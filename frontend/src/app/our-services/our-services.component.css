@@ -1,3 +1,7 @@
+.our-services-container{
+  padding-top: 2em;
+}
+
 #our-services {
   text-align: center;
  }
@@ -17,7 +21,7 @@
 .all-services{
   padding-left: 45px;
   padding-right: 45px;
-  padding-top: 2.5vw;
+  padding-top: 2em;
   margin-right: auto;
   margin-left: auto;
   max-width: 1320px;

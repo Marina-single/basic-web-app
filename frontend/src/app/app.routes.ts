@@ -6,6 +6,6 @@ import { ImmigrationComponent} from './immigration/immigration.component';
 
 export const routes: Routes = [
   { path: '', component: HomePageComponent },
-  { path: 'about', component: AboutCompanyComponent },
+  { path: 'ourcompany', component: AboutCompanyComponent },
    { path: 'immigration', component: ImmigrationComponent }
   ];

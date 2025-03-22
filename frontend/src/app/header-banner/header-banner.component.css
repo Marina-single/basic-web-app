@@ -1,14 +1,15 @@
-
-.info-container{
+.info-position{
   position: absolute;
+  top: 50%;
+  left:15%;
+  transform: translate(-15%, -50%);
+
+}
+.info-container{
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  top: 0;
-  left: 0;
+  align-items: left;
   width: 100%;
   height: 100%;
-  padding: 100px;
   text-align: left;
 }
 
@@ -17,9 +18,9 @@
   font-size:60px;
   text-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   text-transform: uppercase;
-  padding-bottom: 20px;
   letter-spacing: 3px;
   font-weight: 600;
+  padding-bottom:20px;
 
 }
 
@@ -53,30 +54,35 @@
 
 .contact-form {
   position: absolute;
-  top: 75%;
-  left:65%;
-  transform: translateY(-75%);
+  top: 73%;
+  left:85%;
+  transform: translate(-85%, -73%);
   background-color: white;
   border-radius: 15px;
   box-shadow: 0 0 30px;
   overflow: hidden;
+  width: 370px;
+  max-width: 100%;
+
+
 }
 
 .form-titel{
   color: #000;
   font-size: 20px;
   font-weight: 600;
-  padding: 5px 80px;
-  margin-bottom: 0;
-  background-color: lightgray;
-
+  padding-left:20px;
+  padding-top:10px;
+  padding-bottom:10px;
+  background-color: #f1f1f1;
+  text-align:left;
 }
 
 .form-option{
   display: flex;
-  gap:20px;
+  gap:15px;
   flex-direction: column;
-  padding:30px 20px;
+  padding:20px;
 }
 
 a{
@@ -87,11 +93,12 @@ a{
   border: none;
   border-radius: 6px;
   color:white;
-  padding: 8px 100px;
+   padding: 8px 0px 8px 0px;
   position: relative;
   cursor:pointer;
   z-index: 12;
   font-size:15px;
+  background:var(--primary-color);
  }
 
 .button1::after{
@@ -116,7 +123,7 @@ a{
    border: 2px solid var(--primary-color);
    border-radius: 6px;
    color:white;
-   padding: 8px 100px;
+   padding: 8px 0px 8px 0px;
    position: relative;
    color:var(--primary-color);
    cursor:pointer;
@@ -144,8 +151,46 @@ a{
 }
 
 .carousel-container {
-    max-height: 650px;
     overflow: hidden;
+    position: relative;
+    width:100%;
+    height:70%;
+    padding-bottom: var(--pd30);
+}
+
+
+@media (max-width: 1200px) {
+  .contact-form {
+    width: 250px;
+    top: 73%;
+    left: 85%;
+    transform: translate(-85%, -73%);
+  }
+  .contact-form .form-titel {
+    font-size: 16px;
+    padding: 5px 50px;
+    }
+
+  .contact-form .form-option {
+    padding: 15px;
+    gap: 10px;
+  }
+  .button1,
+  .button2 {
+     font-size: 13px;
+     padding: 6px 50px;
+  }
+
+  .info-position{
+       top: 50%;
+       left: 15%;
+       transform: translate(-15%, -50%);
+   }
+
+     .info-title {
+       font-size: 30px;
+     }
+
 }
 
 
@@ -154,8 +199,8 @@ a{
  .contact-form {
      position: static ;
      width: 80%;
-     top: 25%;
-     transform: translateY(-25%);
+     top: 10%;
+     transform: translateY(-10%);
    }
 
    .carousel-container {
@@ -164,16 +209,48 @@ a{
      align-items: center;
    }
 
-   .info-text{
+   .info-position {
+       top: 50%;
+       left: 50%;
+       transform: translate(-50%, -50%);
+       width: 100%;
+       text-align: center;
+     }
+
+   .info-container{
      text-align: center;
      padding-left: 0px;
      top: 0px;
      transform: none;
+     padding: 40px 20px;
    }
 
-   .info-title {
-    font-size: 35px;
-   }
+    .info-title {
+       font-size: 35px;
+       text-align: center;
+     }
 
+   .info-button {
+       font-size: 14px;
+       padding: 8px 40px;
+       text-align: center;
+       display: inline-block;
+     }
+
+   .button1,
+   .button2 {
+    width: 100%;
+    font-size: 14px;
+    padding: 8px 30px;
+  }
+
+  .contact-form .form-titel {
+      font-size: 16px;
+    }
+
+
+  .contact-form .form-option {
+      padding: 20px 10px;
+    }
 }
 

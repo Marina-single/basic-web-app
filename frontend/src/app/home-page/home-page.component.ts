@@ -2,6 +2,9 @@ import { Component } from '@angular/core';
 import { OurServicesComponent } from '../our-services/our-services.component';
 import { CompanyComponent } from '../company/company.component';
 import { HeaderBannerComponent } from '../header-banner/header-banner.component';
+import { RelocationInfoComponent} from '../relocation-info/relocation-info.component';
+import { CompanyInfoComponent } from '../company-info/company-info.component';
+
 
 @Component({
   selector: 'app-home-page',
@@ -9,7 +12,10 @@ import { HeaderBannerComponent } from '../header-banner/header-banner.component'
   imports: [
     OurServicesComponent,
     CompanyComponent,
-    HeaderBannerComponent
+    HeaderBannerComponent,
+    RelocationInfoComponent,
+    CompanyInfoComponent
+
     ],
 
   templateUrl: './home-page.component.html',

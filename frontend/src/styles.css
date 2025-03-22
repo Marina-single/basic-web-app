@@ -1,8 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 :root {
   --primary-color: #003B5C;
-  --secondary-color: #0096d6;
+  --secondary-color: #0084bd;
+  --pd60:60px;
+  --pd30:30px;
+
 }
+
 .background-banner {
 background: linear-gradient(135deg, rgb(0, 59, 92) 12%, rgb(0, 150, 214));
 }
@@ -11,4 +15,21 @@ background: linear-gradient(135deg, rgb(0, 59, 92) 12%, rgb(0, 150, 214));
   font-weight: bold;
   color:var(--primary-color);
   font-size:18px;
+}
+
+.container-for-services {
+    padding-top:30px;
+    padding-bottom:30px;
+}
+
+
+.title-for-services{
+  text-align: center;
+  color:white;
+}
+
+
+
+body {
+  font-family: 'Inter', sans-serif !important;
 }

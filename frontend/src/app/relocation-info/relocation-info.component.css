@@ -1,0 +1,44 @@
+.marked{
+  text-align:center;
+  font-size: 20px;
+}
+
+.relocation-section{
+  padding-top:var(--pd30);
+  margin: 0 auto;
+}
+
+.info-container{
+  padding-top:27px;
+  padding-bottom: 15px;
+}
+
+
+
+hr {
+  width: 30%;
+  margin:auto;
+  background-color: var(--secondary-color);
+  height: 2px;
+  border: none;
+}
+
+@media (max-width: 480px) {
+.container {
+   padding-left: 20px;
+    padding-right: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 420px;
+    }
+}
+@media (min-width: 481px) and (max-width: 992px) {
+  .container {
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 960px;
+
+  }
+}

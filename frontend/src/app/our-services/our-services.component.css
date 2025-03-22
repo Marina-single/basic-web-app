@@ -1,10 +1,11 @@
 .our-services-container{
-  padding-top: 2em;
+padding-top:var(--pd30);
 }
 
-#our-services {
-  text-align: center;
- }
+.marked{
+  text-align:center;
+  font-size: 20px;
+}
 
 .card {
   border: none;
@@ -15,16 +16,23 @@
 }
 
 .card-text {
-  line-height: 30px;
+  line-height: 28px;
+
+}
+
+.subtitle{
+  font-weight: bold;
+  color:var(--secondary-color);
 }
 
 .all-services{
   padding-left: 45px;
   padding-right: 45px;
-  padding-top: 2em;
   margin-right: auto;
   margin-left: auto;
   max-width: 1320px;
+  padding-top:var(--pd30);
+
 
 }
 

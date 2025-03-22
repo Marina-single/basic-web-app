@@ -1,38 +1,103 @@
-<div id="header">
+<div id="header" [ngClass]="{'scrolled': isScrolled}">
   <nav class="navbar navbar-expand-lg navbar-light d-flex justify-content-between w-100">
 
     <div class="logo">
       <a routerLink="/" routerLinkActive="active">
-        <img src="assets/image/logo.png" alt="logo" style="height:60px;">
+        <img src="assets/image/logo.png" alt="logo">
       </a>
     </div>
 
+    <div class="d-flex align-items-center d-lg-none mobile-menu">
+      <div class="language-switcher dropdown">
+        <button class="btn btn-sm dropdown-toggle language-btn" type="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+          {{ currentLanguage.toUpperCase() }}
+        </button>
+        <ul class="dropdown-menu lng-menu">
+          <li><a class="dropdown-item language" (click)="switchLanguage('en')">En</a></li>
+          <li><a class="dropdown-item language" (click)="switchLanguage('de')">De</a></li>
+        </ul>
+      </div>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+      <button class="navbar-toggler ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+
 
     <div class="collapse navbar-collapse" id="navbarNav">
       <div class="navbar-nav ms-auto gap-3">
+
+
         <div class="nav-item dropdown">
           <a class="navigation-option nav-link dropdown-toggle"
-             id="servicesDropdown"
+             id="servicesDropdown1"
              role="button"
              data-bs-toggle="dropdown"
-             aria-expanded="false">Our services</a>
-          <div class="dropdown-menu" aria-labelledby="servicesDropdown">
-            <div class="dropdown-item" routerLink= "/immigration" >Immigration</div>
-            <div class="dropdown-item" routerLink="#">Settling-in</div>
-            <div class="dropdown-item" routerLink ="#">Home Search</div>
-            <div class="dropdown-item" routerLink="#">Family support</div>
-            <div class="dropdown-item" routerLink= "#">Intercultural Service</div>
-            <div class="dropdown-item" routerLink= "/">Individual needs</div>
+             aria-expanded="false">
+            {{ 'OUR_SERVICES' | translate }}
+          </a>
+          <div class="dropdown-menu" aria-labelledby="servicesDropdown1">
+            <div class="dropdown-item" routerLink="/immigration" data-bs-toggle="collapse"
+                 data-bs-target=".navbar-collapse.show">{{ 'IMMIGRATION' | translate }}
+            </div>
+            <div class="dropdown-item" routerLink="/settle-in" data-bs-toggle="collapse"
+                 data-bs-target=".navbar-collapse.show">{{ 'SETTLING_IN' | translate }}
+            </div>
+            <div class="dropdown-item" routerLink="/homesearch" data-bs-toggle="collapse"
+                 data-bs-target=".navbar-collapse.show">{{ 'HOME_SEARCH' | translate }}
+            </div>
+            <div class="dropdown-item" routerLink="/family-support" data-bs-toggle="collapse"
+                 data-bs-target=".navbar-collapse.show">{{ 'FAMILY_SUPPORT' | translate }}
+            </div>
+            <div class="dropdown-item" routerLink="/intercultural-service" data-bs-toggle="collapse"
+                 data-bs-target=".navbar-collapse.show">{{ 'CULTURAL_SUPPORT' | translate }}
+            </div>
+            <div class="dropdown-item" routerLink="/individual-needs" data-bs-toggle="collapse"
+                 data-bs-target=".navbar-collapse.show">{{ 'INDIVIDUAL_NEEDS' | translate }}
+            </div>
           </div>
         </div>
-        <a class="navigation-option nav-link" routerLink="/ourcompany" routerLinkActive="active">Our company</a>
-        <a class="navigation-option nav-link" routerLink="">Locations</a>
-        <a class="navigation-option nav-link" href="#contact-us">Contact us</a>
+
+        <div class="nav-item dropdown">
+          <a class="navigation-option nav-link dropdown-toggle"
+             id="servicesDropdown2"
+             role="button"
+             data-bs-toggle="dropdown"
+             aria-expanded="false">
+            {{ 'OUR_COMPANY' | translate }}
+          </a>
+          <div class="dropdown-menu" aria-labelledby="servicesDropdown2">
+            <div class="dropdown-item" routerLink="/ourcompany" data-bs-toggle="collapse"
+                 data-bs-target=".navbar-collapse.show">
+              {{ 'ABOUT_US' | translate }}
+            </div>
+            <div class="dropdown-item" routerLink="/your-advantages" data-bs-toggle="collapse"
+                 data-bs-target=".navbar-collapse.show">
+              {{ 'YOUR_ADVANTAGES' | translate }}
+            </div>
+          </div>
+        </div>
+
+        <a class="navigation-option nav-link" href="#contact-us" data-bs-toggle="collapse"
+           data-bs-target=".navbar-collapse.show" (click)="scrollToSection('contact-us')">{{ 'CONTACT_US' | translate
+          }}</a>
+
       </div>
     </div>
+
+    <div class="d-none d-lg-flex align-items-center">
+      <div class="language-switcher dropdown">
+        <button class="btn btn-sm dropdown-toggle language-btn" type="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+          {{ currentLanguage.toUpperCase() }}
+        </button>
+        <ul class="dropdown-menu lng-menu">
+          <li><a class="dropdown-item language" (click)="switchLanguage('en')">En</a></li>
+          <li><a class="dropdown-item language" (click)="switchLanguage('de')">De</a></li>
+        </ul>
+      </div>
+    </div>
+
   </nav>
 </div>

@@ -1,44 +1,60 @@
+<div class=" container-for-services background-banner">
+  <h2 class="title-for-services">{{ 'IMMIGRATION_TITLE' | translate }}</h2>
+  <p class="title-for-services">{{'CULTURAL_SUPPORT_TITLE' | translate }} </p>
+</div>
 
-<img class="img-fluid w-100" src="assets/image/header.jpg">
-<h2 id="immigration" class="background-banner">Visa & Immigration</h2>
 <div class="container immigration-container">
-<div>
-  <p>The first step in the successful relocation of an employee is the residence permit or visa - the application for which can be a complicated and time-consuming process.</p>
-
-    <p class="marked">We:</p>
+  <div>
+    <p>{{ 'VISA_IMMIGRATION_DESCRIPTION' | translate }}</p>
+    <p class="marked">{{ 'OUR_SERVICES' | translate }}:</p>
     <ul class="list-unstyled">
       <li class="d-flex mb-2">
         <i class="bi bi-check-circle-fill"></i>
-        Complete the necessary forms and applications according to your specifications
+        {{ 'COMPLETE_FORMS' | translate }}
       </li>
       <li class="d-flex mb-2">
         <i class="bi bi-check-circle-fill"></i>
-        Support you in obtaining and forwarding all the necessary documents and papers
+        {{ 'SUPPORT_DOCUMENTS' | translate }}
       </li>
       <li class="d-flex mb-2">
         <i class="bi bi-check-circle-fill"></i>
-        Coordinate appointments and accompany you to the authorities
+        {{ 'COORDINATE_APPOINTMENTS' | translate }}
       </li>
       <li class="d-flex mb-2">
         <i class="bi bi-check-circle-fill"></i>
-        Coordinate the time schedule
+        {{ 'COORDINATE_SCHEDULE' | translate }}
       </li>
       <li class="d-flex mb-2">
         <i class="bi bi-check-circle-fill"></i>
-        Assist with the necessary local registration with the authorities
+        {{ 'ASSIST_REGISTRATION' | translate }}
       </li>
     </ul>
-<p>During the process, 1source-consulting employees work closely with the HR department and the relevant authorities.</p>
 
-  <h3 class="advantages marked">Your Advantages</h3>
-  <div>
-    <p>Support from employees with many years of experience and excellent knowledge of all procedures; this saves you time and efort.</p>
-    <p>These steps are part of the relocation process</p>
-    <p>The risk of additional costs arising from missing documents and records is minimized.</p>
-  </div>
+    <p>
+      {{ 'WORK_WITH_HR' | translate }} </p>
 
-  <div>
-  <p class="marked">In accordance with § 2 paragraph 1 RDG, we do not provide legal services.</p>
+    <p class="marked ">{{ 'IMMIGRATION_ADVANTAGES' | translate }}</p>
+
+    <div class="advantages">
+      <div class="row text-center justify-content-center">
+        <div class="col-md-3" *ngFor="let item of advantages">
+          <div class="stat-item">
+            <div class="icon-wrapper">
+              <i class="bi " [ngClass]="item.icon"></i>
+            </div>
+            <p class="marked">{{ item.title }}</p>
+            <p>{{ item.description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <p>
+        {{ 'SMALL_INFO' | translate }}
+      </p>
+      <p>
+        {{ 'LEGAL_SERVICE_NOTE' | translate }} </p>
+    </div>
   </div>
-</div>
 </div>

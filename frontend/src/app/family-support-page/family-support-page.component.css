@@ -1,0 +1,28 @@
+.container{
+  padding-top: 2em;
+  padding-bottom:4em;
+}
+i{
+  color: var(--secondary-color);
+  padding-right:10px;
+ }
+
+@media (max-width: 480px) {
+.container {
+   padding-left: 20px;
+    padding-right: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 420px;
+    }
+}
+@media (min-width: 481px) and (max-width: 992px) {
+  .container {
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 960px;
+
+  }
+}

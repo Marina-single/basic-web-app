@@ -33,7 +33,7 @@ i {
   border-top-right-radius: 0;
   border-top-left-radius: 0;
   transition: all 0.4s ease-in-out;
-  pointer:cursor;
+  cursor: pointer;
 }
 
 .contact-btn:hover {
@@ -46,11 +46,31 @@ i {
   position: sticky;
   top: 0;
   z-index: 15;
-  transition: height 0.3s ease, padding 0.3s ease;
   background-color: white;
+  transition: height 0.4s ease-in-out, padding 0.4s ease-in-out;
+  border: 1px solid #E5EBEE;
 
 }
 
+.logo img {
+  height:60px;
+ }
+
+#header.scrolled {
+   height: 70px;
+   padding-top: 0px;
+
+ }
+#header.scrolled .logo img {
+   height: 50px;
+   transition: height 0.4s ease-in-out;
+
+ }
+
+#header.scrolled .navigation-option {
+   font-size: 18px;
+   transition: height 0.4s ease-in-out;
+ }
 
 .logo {
   margin-left:60px;
@@ -62,12 +82,12 @@ i {
 
 .navbar-nav{
   margin-right:60px;
-  color: #3a343f;
+  color: black;
 }
 
 .navigation-option {
   text-decoration: none;
-  color: #3a343f;
+  color: black;
   cursor: pointer;
   transition: color 0.3s ease;
   font-size:18px;
@@ -81,16 +101,34 @@ i {
   cursor:pointer;
 }
 
+
 .nav-item.dropdown:hover .dropdown-menu {
   display: block;
   margin-top: 0;
 }
 
+.language-switcher {
+  font-size: 12px;
+  padding-right:20px;
+}
+
+.language-btn {
+  background: none;
+  border: none;
+  color: #333;
+  font-size: 12px;
+}
+
+.lng-menu {
+  min-width: 40px;
+}
+
+.language {
+  font-size: 12px;
+  color: #333;
+}
 
 @media (max-width: 992px) {
-  .pre-header{
-  display:none;
-}
 
   .navbar-collapse {
     background-color: white;

@@ -5,70 +5,82 @@
       <div class="carousel-item active" data-bs-interval="4000">
         <a routerLink="/immigration">
           <img src="assets/image/immigration.jpg" class="d-block w-100" alt="...">
-          <div class="info-container">
-            <div class="container">
-              <h3 class="info-title">Immigration</h3>
-              <span routerLink="/immigration" class="info-button background-banner"> BUTTON</span>
+          <div class="info-position">
+            <div class="info-container">
+              <div class="container">
+                <h3 class="info-title">{{ 'IMMIGRATION' | translate }}</h3>
+                <span routerLink="/immigration" class="info-button background-banner"> {{ 'BUTTON_READ_MORE' | translate }}</span>
+              </div>
             </div>
           </div>
         </a>
       </div>
 
       <div class="carousel-item" data-bs-interval="4000">
-        <a routerLink="/">
+        <a routerLink="/homesearch">
           <img src="assets/image/homesearch.jpg" class="d-block w-100" alt="...">
-          <div class="info-container">
-            <div class="container">
-              <h3 class="info-title">Home Search</h3>
-              <span routerLink="/" class="info-button background-banner"> BUTTON</span>
+          <div class="info-position">
+            <div class="info-container">
+              <div class="container">
+                <h3 class="info-title"> {{ 'HOME_SEARCH' | translate }}</h3>
+                <span routerLink="/homesearch" class="info-button background-banner"> {{ 'BUTTON_READ_MORE' | translate }}</span>
+              </div>
             </div>
           </div>
         </a>
       </div>
 
       <div class="carousel-item" data-bs-interval="4000">
-        <a routerLink="/">
+        <a routerLink="/settle-in">
           <img src="assets/image/settlein.jpg" class="d-block w-100" alt="...">
-          <div class="info-container">
-            <div class="container">
-              <h3 class="info-title">Settle-in</h3>
-              <span routerLink="/immigration" class="info-button background-banner"> BUTTON</span>
+          <div class="info-position">
+            <div class="info-container">
+              <div class="container">
+                <h3 class="info-title">{{ 'SETTLING_IN' | translate }}</h3>
+                <span routerLink="/settle-in" class="info-button background-banner"> {{ 'BUTTON_READ_MORE' | translate }}</span>
+              </div>
             </div>
           </div>
         </a>
       </div>
 
       <div class="carousel-item" data-bs-interval="4000">
-        <a routerLink="/">
+        <a routerLink="/family-support">
           <img src="assets/image/familysupport.jpg" class="d-block w-100" alt="...">
-          <div class="info-container">
-            <div class="container">
-              <h3 class="info-title">Family support</h3>
-              <span routerLink="/immigration" class="info-button background-banner"> BUTTON</span>
+          <div class="info-position">
+            <div class="info-container">
+              <div class="container">
+                <h3 class="info-title">{{ 'FAMILY_SUPPORT' | translate }}</h3>
+                <span routerLink="/family-support" class="info-button background-banner"> {{ 'BUTTON_READ_MORE' | translate }}</span>
+              </div>
             </div>
           </div>
         </a>
       </div>
 
       <div class="carousel-item" data-bs-interval="4000">
-        <a routerLink="/">
-          <img src="assets/image/culture.jpg" class="d-block w-100" alt="...">
-          <div class="info-container">
-            <div class="container">
-              <h3 class="info-title">Cultural support</h3>
-              <span routerLink="/" class="info-button background-banner"> BUTTON</span>
+        <a routerLink="intercultural-service">
+          <img src="assets/image/culturesupport.jpg" class="d-block w-100" alt="...">
+          <div class="info-position">
+            <div class="info-container">
+              <div class="container">
+                <h3 class="info-title">{{ 'CULTURAL_SUPPORT' | translate }}</h3>
+                <span routerLink="/intercultural-service" class="info-button background-banner"> {{ 'BUTTON_READ_MORE' | translate }}</span>
+              </div>
             </div>
           </div>
         </a>
       </div>
 
       <div class="carousel-item" data-bs-interval="4000">
-        <a routerLink="/">
+        <a routerLink="/individual-needs">
           <img src="assets/image/individual.jpg" class="d-block w-100" alt="...">
-          <div class="info-container">
-            <div class="container">
-              <h3 class="info-title">Individual needs</h3>
-              <span routerLink="/" class="info-button background-banner"> BUTTON</span>
+          <div class="info-position">
+            <div class="info-container">
+              <div class="container">
+                <h3 class="info-title">{{ 'INDIVIDUAL_NEEDS' | translate }}</h3>
+                <span routerLink="/individual-needs" class="info-button background-banner"> {{ 'BUTTON_READ_MORE' | translate }}</span>
+              </div>
             </div>
           </div>
         </a>
@@ -87,12 +99,12 @@
 
   <div class="contact-form text-center ">
     <div class="form-titel">
-      <p>CONTACT US</p>
+      <div>{{ 'CONTACT_US_FORM' | translate }}</div>
     </div>
 
     <div class="form-option">
-      <a class="button1 background-banner" href="tel:+4917630430423">CALL TO US</a>
-      <a class="button2" href="#contact-us">WRITE TO US</a>
+      <a class="button1 " href="tel:+4917630430423">{{ 'CALL_US' | translate }}</a>
+      <a class="button2" href="#contact-us">{{ 'WRITE_US' | translate }}</a>
     </div>
   </div>
 

@@ -1,35 +1,48 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
+
 
 @Component({
   selector: 'app-company',
   standalone: true,
-  imports: [ CommonModule ],
+  imports: [ CommonModule,TranslateModule ],
   templateUrl: './company.component.html',
   styleUrl: './company.component.css'
 })
 export class CompanyComponent {
-advantages = [
-    {
-      icon: 'bi-box-seam', // Иконка Bootstrap Icons
-      title: 'Seamless Service',
-      description: 'All services from one provider – no need for multiple vendors.'
-    },
-    {
-      icon: 'bi-person-heart',
-      title: 'Personalized Support',
-      description: 'Assistance tailored to your unique needs, every step of the way.'
-    },
-    {
-      icon: 'bi-clock-history',
-      title: 'Time Savings',
-      description: 'We manage the details so you can focus on what’s most important.'
-    },
-    {
-      icon: 'bi-lightbulb',
-      title: 'In-Depth Consultation',
-      description: 'Expert advice to ensure a smooth and hassle-free transition.'
-    }
-  ];
+reasons: any[] = [];
+
+     constructor(private translate: TranslateService) {
+       this.loadAdvantages();
+       this.translate.onLangChange.subscribe(() => {
+         this.loadAdvantages();
+       });
+     }
+
+     loadAdvantages() {
+       this.reasons = [
+         {
+           icon: 'bi-box-seam',
+           title: this.translate.instant('REASON_TITLE_1'),
+           description: this.translate.instant('REASON_DESC_1')
+         },
+         {
+           icon: 'bi-person-heart',
+           title: this.translate.instant('REASON_TITLE_2'),
+           description: this.translate.instant('REASON_DESC_2')
+         },
+         {
+           icon: 'bi-clock-history',
+           title: this.translate.instant('REASON_TITLE_3'),
+           description: this.translate.instant('REASON_DESC_3')
+         },
+         {
+          icon: 'bi-lightbulb',
+          title: this.translate.instant('REASON_TITLE_4'),
+          description: this.translate.instant('REASON_DESC_4')
+         }
+       ];
+     }
 }
 

@@ -20,24 +20,6 @@ i {
 
 }
 
-.contact-btn{
-  position: absolute;
-  padding: 15px 30px;
-  right:65px;
-  top: -6px;
-  color:white;
-  text-transform: uppercase;
-  display: inline-block;
-  z-index: 13;
-  border-radius: 10px;
-  border-top-right-radius: 0;
-  border-top-left-radius: 0;
-  transition: all 0.4s ease-in-out;
-  cursor: pointer;
-}
-
-.contact-btn:hover {
-}
 
 #header {
   height: 90px;
@@ -147,4 +129,27 @@ i {
   .navbar-collapse .nav-link:hover {
     color: lightgray;
   }
+
+.logo img {
+  height:50px;
+ }
+}
+@media (max-width: 480px){
+.logo img {
+  height:40px;
+ }
+
+
+.logo {
+  margin-left:10px;
+}
+
+.navbar-toggler{
+  margin-right:10px;
+
+}
+.language-switcher {
+  font-size: 10px;
+  padding-right:0px;
+}
 }

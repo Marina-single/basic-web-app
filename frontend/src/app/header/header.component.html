@@ -1,3 +1,4 @@
+
 <div id="header" [ngClass]="{'scrolled': isScrolled}">
   <nav class="navbar navbar-expand-lg navbar-light d-flex justify-content-between w-100">
 
@@ -7,8 +8,8 @@
       </a>
     </div>
 
-    <div class="d-flex align-items-center d-lg-none mobile-menu">
-      <div class="language-switcher dropdown">
+    <div class="d-flex align-items-center d-lg-none ">
+      <div class="language-switcher dropdown me-2">
         <button class="btn btn-sm dropdown-toggle language-btn" type="button" data-bs-toggle="dropdown"
                 aria-expanded="false">
           {{ currentLanguage.toUpperCase() }}
@@ -19,7 +20,7 @@
         </ul>
       </div>
 
-      <button class="navbar-toggler ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
     </div>

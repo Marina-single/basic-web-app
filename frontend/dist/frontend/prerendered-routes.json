@@ -1,7 +1,13 @@
 {
   "routes": [
     "/",
+    "/family-support",
+    "/homesearch",
     "/immigration",
-    "/ourcompany"
+    "/individual-needs",
+    "/intercultural-service",
+    "/ourcompany",
+    "/settle-in",
+    "/your-advantages"
   ]
 }

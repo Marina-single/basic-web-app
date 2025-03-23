@@ -51,6 +51,6 @@ export class HeaderComponent {
   switchLanguage(language: string) {
     this.translate.use(language);
     this.currentLanguage = language;
-    localStorage.setItem('lang', language);
+    localStorage.setItem('language', language);
   }
 }

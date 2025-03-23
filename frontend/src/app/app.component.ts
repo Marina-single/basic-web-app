@@ -67,37 +67,29 @@ export class AppComponent implements OnInit {
  constructor(
     private router: Router,
     private translate: TranslateService,
-    @Inject(PLATFORM_ID) private platformId: Object
+    @Inject(PLATFORM_ID) private platformId: object
     ) {}
 
    ngOnInit() {
 
-     this.translate.addLangs(['en', 'de']);
-     this.translate.setDefaultLang('en');
-
-     let selectedLang = 'en';
-
      if (isPlatformBrowser(this.platformId)) {
-       const savedLang = localStorage.getItem('language');
+       let savedLang = localStorage.getItem('language');
 
-            if (savedLang) {
-               selectedLang = savedLang;
-            }
-            else
-            {
-               const browserLang = this.translate.getBrowserLang();
-               if (browserLang && ['en', 'de'].includes(browserLang)) {
-                 selectedLang = browserLang;
+             if (!savedLang) {
+               savedLang = this.translate.getBrowserLang() || 'en';
+               if (!['en', 'de'].includes(savedLang)) {
+                 savedLang = 'en';
                }
-               localStorage.setItem('language', selectedLang);
-            }
+               localStorage.setItem('language', savedLang);
+             }
 
-        this.translate.use(selectedLang);
+             this.translate.use(savedLang);
 
-        this.router.events
-        .pipe(filter(event => event instanceof NavigationEnd))
-        .subscribe(() => {
-          window.scrollTo({ top: 0, behavior: 'auto' });
+
+     this.router.events
+       .pipe(filter(event => event instanceof NavigationEnd))
+       .subscribe(() => {
+         window.scrollTo({ top: 0, behavior: 'auto' });
         });
     }
   }

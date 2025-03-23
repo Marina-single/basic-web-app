@@ -187,9 +187,11 @@ a{
        transform: translate(-15%, -50%);
    }
 
-     .info-title {
-       font-size: 30px;
-     }
+
+  .info-title {
+       font-size: 45px;
+  }
+
 
 }
 
@@ -226,15 +228,12 @@ a{
    }
 
     .info-title {
-       font-size: 35px;
+       font-size: 30px;
        text-align: center;
      }
 
    .info-button {
-       font-size: 14px;
-       padding: 8px 40px;
-       text-align: center;
-       display: inline-block;
+     display:none;
      }
 
    .button1,

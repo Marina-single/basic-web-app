@@ -20,6 +20,7 @@ background: linear-gradient(135deg, rgb(0, 59, 92) 12%, rgb(0, 150, 214));
 .container-for-services {
     padding-top:30px;
     padding-bottom:30px;
+    height:130px;
 }
 
 

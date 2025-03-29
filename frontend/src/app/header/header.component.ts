@@ -1,16 +1,15 @@
-import { Component, HostListener } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { Router, NavigationEnd } from '@angular/router';
+import { Component, HostListener, Inject, PLATFORM_ID } from '@angular/core';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
+import { Router, NavigationEnd, RouterModule } from '@angular/router';
 import { filter } from 'rxjs';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
-import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-header',
   standalone: true,
   imports: [
-    RouterModule,
     CommonModule,
+    RouterModule,
     TranslateModule
   ],
   templateUrl: './header.component.html',
@@ -19,19 +18,34 @@ import { RouterModule } from '@angular/router';
 export class HeaderComponent {
   isScrolled = false;
   currentLanguage = 'en';
+  isBrowser = false;
 
-  constructor(private router: Router, private translate: TranslateService) {
+  constructor(
+    private router: Router,
+    private translate: TranslateService,
+    @Inject(PLATFORM_ID) private platformId: object
+  ) {
+    this.isBrowser = isPlatformBrowser(this.platformId);
+
     this.translate.setDefaultLang('en');
-    this.currentLanguage = this.translate.currentLang || 'en';
 
-    this.router.events.pipe(
-      filter(event => event instanceof NavigationEnd)
-    ).subscribe(() => {
-      const fragment = this.router.url.split('#')[1];
-      if (fragment) {
-        this.scrollToSection(fragment);
-      }
-    });
+    if (this.isBrowser) {
+      this.loadLanguage();
+    }
+
+    this.router.events.pipe(filter(event => event instanceof NavigationEnd))
+      .subscribe(() => {
+        const fragment = this.router.url.split('#')[1];
+        if (fragment) {
+          this.scrollToSection(fragment);
+        }
+      });
+  }
+
+  ngOnInit() {
+    if (this.isBrowser) {
+      this.loadLanguage();
+    }
   }
 
   @HostListener('window:scroll', [])
@@ -51,6 +65,27 @@ export class HeaderComponent {
   switchLanguage(language: string) {
     this.translate.use(language);
     this.currentLanguage = language;
-    localStorage.setItem('language', language);
+
+    if (this.isBrowser) {
+      setTimeout(() => {
+        try {
+          localStorage.setItem('language', language);
+        } catch (error) {
+          console.warn('Ошибка доступа к localStorage:', error);
+        }
+      }, 0);
+    }
+  }
+
+  private loadLanguage() {
+    setTimeout(() => {
+      try {
+        const savedLang = localStorage.getItem('language') || this.translate.getBrowserLang() || 'en';
+        this.translate.use(savedLang);
+        this.currentLanguage = savedLang;
+      } catch (error) {
+        console.warn('Ошибка доступа к localStorage:', error);
+      }
+    }, 0);
   }
 }

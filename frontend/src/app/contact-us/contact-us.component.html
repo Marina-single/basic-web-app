@@ -4,24 +4,24 @@
 
    <div class="parent row">
      <div id="contact-form" class="col-lg-8 col-md-12 col-12">
-     <form action="">
+     <form (ngSubmit)="onSubmit()" #contactForm="ngForm">
       <div class="contact-el">
         <label for="name">{{ 'CONTACT_US_NAME' | translate }}*:</label>
-        <input type= "text" id="name" name="name" required>
+        <input type= "text" id="name" name="name" [(ngModel)]="user.name" required>
       </div>
       <div class="contact-el">
         <label for="email">{{ 'CONTACT_US_EMAIL' | translate }}*:</label>
-        <input type="email" id="email" name="email" required>
+        <input type="email" id="email" name="email" [(ngModel)]="user.email" required>
       </div>
       <div class="contact-el">
         <label for="number">{{ 'CONTACT_US_PHONE' | translate }}*:</label>
-        <input type="tel" id="number" name="number" required>
+        <input type="tel" id="number" name="number" [(ngModel)]="user.phone" required>
       </div >
       <div class="contact-el">
         <label for="message">{{ 'CONTACT_US_MESSAGE' | translate }}</label>
-        <textarea id="message" name="message"></textarea>
+        <textarea id="message" name="message" [(ngModel)]="user.message"></textarea>
       </div>
-        <button type="submit">{{ 'Send' | translate }}</button>
+        <button type="submit" [disabled]="!contactForm.form.valid">{{ 'Send' | translate }}</button>
      </form>
      </div>
      <div id="email-phone-address" class="col-lg-4 col-md-12 col-12 background-banner">

@@ -7,7 +7,7 @@
 }
 
 .parent {
-  padding-top: 2em;
+  padding-top: var(--pd30);
   padding-bottom: 5em;
   display: flex;
   justify-content: center;
@@ -52,6 +52,7 @@ button {
   border-radius: 6px;
   color:white;
   background-color: var(--primary-color);
+  cursor: pointer;
 }
 
 button:hover{

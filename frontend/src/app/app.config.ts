@@ -21,8 +21,7 @@ export const appConfig: ApplicationConfig = {
   providers: [
     provideRouter(routes),
     provideClientHydration(),
-    provideHttpClient(withInterceptorsFromDi()),
-    provideHttpClient(withFetch()),
+    provideHttpClient(withInterceptorsFromDi(), withFetch()),
 
     importProvidersFrom(
       TranslateModule.forRoot({

@@ -1,4 +1,4 @@
-a{
+a {
   text-decoration:none;
   color: white;
 }
@@ -41,7 +41,7 @@ i {
 }
 
 
-.navbar-nav{
+.navbar-nav {
   margin-right:60px;
   color: black;
 }
@@ -55,11 +55,17 @@ i {
 }
 
 .navigation-option:hover {
-  color: #7D7981;
+  color: #777279;
 }
 
-.dropdown-menu{
+.dropdown-menu {
   cursor:pointer;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.15);
+  border:none;
+}
+
+.dropdown-item {
+  padding: 6px 20px;
 }
 
 .nav-item.dropdown:hover .dropdown-menu {
@@ -70,6 +76,7 @@ i {
 .language-toggle{
   cursor:pointer;
 }
+
 
 @media (max-width: 992px) {
 

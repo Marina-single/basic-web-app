@@ -21,41 +21,41 @@ export class OurServicesComponent {
 services = [
     {
       icon: 'bi bi-passport',
-      title: 'IMMIGRATION_TITLE',
+      title: 'IMMIGRATION',
       subtitle: 'IMMIGRATION_SUBTITLE',
       description: 'IMMIGRATION_DESC'
     },
 
     {
         icon: 'bi bi-people',
-        title: 'FAMILY_SUPPORT_TITLE',
+        title: 'FAMILY_SUPPORT',
         subtitle: 'FAMILY_SUPPORT_SUBTITLE',
         description: 'FAMILY_SUPPORT_DESC'
     },
 
     {
          icon: 'bi  bi-geo-alt',
-         title: 'SETTLING_IN_TITLE',
+         title: 'SETTLING_IN',
          subtitle: 'SETTLING_IN_SUBTITLE',
          description:'SETTLING_IN_DESC'
     },
 
     {
         icon: 'bi bi-house-door',
-        title: 'HOME_SEARCH_TITLE',
+        title: 'HOME_SEARCH',
         subtitle: 'HOME_SEARCH_TITLE_SUBTITLE',
         description: 'HOME_SEARCH_DESC'
     },
 
     {
       icon: 'bi bi-globe',
-      title: 'INTERCULTURAL_TITLE',
+      title: 'CULTURAL_SUPPORT',
       subtitle: 'INTERCULTURAL_SUBTITLE',
       description:'INTERCULTURAL_DESC'
     },
     {
       icon: 'bi bi-person-check',
-      title: 'INDIVIDUAL_NEEDS_TITLE',
+      title: 'INDIVIDUAL_NEEDS',
       subtitle: 'INDIVIDUAL_NEEDS_SUBTITLE',
       description: 'INDIVIDUAL_NEEDS_DESC'
     }

@@ -95,13 +95,35 @@ button:hover{
 .address{
   font-size: 14px;
 }
+
+.error-msg {
+  color: var(--primary-color);
+  font-size: 14px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.success-msg {
+  color: var(--primary-color);
+  font-size: 14px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+input.ng-invalid.ng-touched,
+textarea.ng-invalid.ng-touched {
+  border: 1px solid var(--secondary-color);
+  background-color: #fff5f5;
+}
+
+
+
 @media (min-width: 900px) {
     #email-phone-address{
         width: 30%;
-
     }
-   #contact-form{
-            width: 50%;
 
+   #contact-form{
+       width: 50%;
         }
    }

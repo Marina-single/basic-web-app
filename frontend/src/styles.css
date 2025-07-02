@@ -1,4 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  font-family: 'Open Sans', sans-serif  !important;
+}
+
 :root {
   --primary-color: #003B5C;
   --secondary-color: #0084bd;
@@ -29,8 +33,22 @@ background: linear-gradient(135deg, rgb(0, 59, 92) 12%, rgb(0, 150, 214));
   color:white;
 }
 
+@media (max-width: 480px) {
+.container {
+   padding-left: 20px  !important;
+    padding-right: 20px !important;
+    margin-right: auto !important;
+    margin-left: auto !important;
+    max-width: 420px !important;
+    }
+}
+@media (min-width: 481px) and (max-width: 992px) {
+  .container {
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+    margin-right: auto !important;
+    margin-left: auto  !important;
+    max-width: 960px  !important;
 
-
-body {
-  font-family: 'Inter', sans-serif !important;
+  }
 }

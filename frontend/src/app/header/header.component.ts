@@ -62,18 +62,20 @@ export class HeaderComponent {
     }, 300);
   }
 
+  toggleLanguage() {
+    const newLang = this.currentLanguage === 'en' ? 'de' : 'en';
+    this.switchLanguage(newLang);
+  }
   switchLanguage(language: string) {
     this.translate.use(language);
     this.currentLanguage = language;
 
     if (this.isBrowser) {
-      setTimeout(() => {
-        try {
-          localStorage.setItem('language', language);
-        } catch (error) {
-          console.warn('Ошибка доступа к localStorage:', error);
-        }
-      }, 0);
+      try {
+        localStorage.setItem('language', language);
+      } catch (error) {
+        console.warn('Ошибка доступа к localStorage:', error);
+      }
     }
   }
 

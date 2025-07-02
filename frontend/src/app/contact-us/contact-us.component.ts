@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
-import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { TranslateModule } from '@ngx-translate/core';
 import { NgIf, NgFor, NgClass } from '@angular/common';
-import { FormsModule } from '@angular/forms'; //
+import { FormsModule, NgForm } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { provideHttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-contact-us',
@@ -14,12 +13,16 @@ import { provideHttpClient } from '@angular/common/http';
     NgFor,
     NgClass,
     FormsModule,
-    HttpClientModule],
+    HttpClientModule
+  ],
   templateUrl: './contact-us.component.html',
   styleUrl: './contact-us.component.css'
 })
 export class ContactUsComponent {
- user = {
+  successMessage: string = '';
+  errorMessage: string = '';
+
+  user = {
     name: '',
     email: '',
     phone: '',
@@ -28,18 +31,28 @@ export class ContactUsComponent {
 
   constructor(private http: HttpClient) {}
 
-  onSubmit() {
+  onSubmit(form: NgForm) {
+    if (form.invalid) {
+      this.errorMessage = 'Please fill out all required fields.';
+      this.successMessage = '';
+      return;
+    }
+
     this.http.post('http://localhost:3000/send-email', this.user)
       .subscribe(
         response => {
-        console.log('Email sent:', response);
-        alert('Your message has been sent!');
-        this.user = { name: '', email: '', phone: '', message: '' };
-      },
-    error => {
-        console.error('Error:', error);
-        alert('An error occurred while sending. Please try again later.');
-     });
+          console.log('Email sent:', response);
+          this.successMessage = 'Your message has been sent!';
+          this.errorMessage = '';
+          form.resetForm(); //
+        },
+        error => {
+          console.error('Error:', error);
+          this.errorMessage = 'An error occurred while sending. Please try again later.';
+          this.successMessage = '';
+          form.resetForm();
 
+        }
+      );
   }
 }

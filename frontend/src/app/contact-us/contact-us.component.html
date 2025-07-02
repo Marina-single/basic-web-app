@@ -4,25 +4,50 @@
 
    <div class="parent row">
      <div id="contact-form" class="col-lg-8 col-md-12 col-12">
-     <form (ngSubmit)="onSubmit()" #contactForm="ngForm">
+     <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
       <div class="contact-el">
         <label for="name">{{ 'CONTACT_US_NAME' | translate }}*:</label>
-        <input type= "text" id="name" name="name" [(ngModel)]="user.name" required>
+        <input type= "text" id="name" name="name" [(ngModel)]="user.name" required
+               #name="ngModel" [ngClass]="{ 'invalid': name.invalid && name.touched }">
+        <div *ngIf="name.invalid && name.touched" class="error-msg">
+          {{ 'Please enter your name' | translate }}
+        </div>
       </div>
       <div class="contact-el">
         <label for="email">{{ 'CONTACT_US_EMAIL' | translate }}*:</label>
-        <input type="email" id="email" name="email" [(ngModel)]="user.email" required>
+        <input type="email" id="email" name="email" [(ngModel)]="user.email" required
+               #email="ngModel"  [ngClass]="{ 'invalid': email.invalid && email.touched }">
+        <div *ngIf="email.invalid && email.touched" class="error-msg">
+          {{ 'Please enter a valid email' | translate }}
+        </div>
       </div>
+
       <div class="contact-el">
         <label for="number">{{ 'CONTACT_US_PHONE' | translate }}*:</label>
-        <input type="tel" id="number" name="number" [(ngModel)]="user.phone" required>
+        <input type="tel" id="number" name="number" [(ngModel)]="user.phone" required
+               #number="ngModel" pattern="^\+?\d{1,4}?[0-9]{7,15}$"
+               [ngClass]="{ 'invalid': number.invalid && number.touched }">
+        <div *ngIf="number.invalid && number.touched" class="error-msg">
+          {{ 'Please enter a valid phone number' | translate }}
+        </div>
       </div >
+
       <div class="contact-el">
         <label for="message">{{ 'CONTACT_US_MESSAGE' | translate }}</label>
         <textarea id="message" name="message" [(ngModel)]="user.message"></textarea>
       </div>
         <button type="submit" [disabled]="!contactForm.form.valid">{{ 'Send' | translate }}</button>
+       <p class="error-msg" *ngIf="errorMessage">{{ errorMessage }}</p>
+       <p class="success-msg" *ngIf="successMessage">{{ successMessage }}</p>
+       <!--
+       <p class="error-msg" *ngIf="contactForm.invalid && !contactForm.submitted">
+         {{ 'Please fill in all required fields.' | translate }}
+       </p>
+       -->
+
      </form>
+
+
      </div>
      <div id="email-phone-address" class="col-lg-4 col-md-12 col-12 background-banner">
       <div class="contact-element phone-number">+49 176 30430423</div>

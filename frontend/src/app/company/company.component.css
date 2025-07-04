@@ -2,7 +2,6 @@
 .container{
   padding-top: var(--pd30);
   padding-bottom: var(--pd30);
-  text-align: left;
 }
 
 .icon-wrapper{
@@ -11,18 +10,22 @@
 
 .icon-wrapper i {
   font-size: 3rem;
-  color: var(--secondary-color);
+  color: var(--primary-color);
 }
 
 
 .advantage{
-  background-color: #FCFDFD;
+  background-color: var(--background-secondary);
 }
 
-h6{
+.title{
   color: var(--primary-color);
   font-size:20px;
   padding-bottom:10px;
+}
+
+.description{
+  text-align: left;
 }
 
 @media (max-width: 1000px) {

@@ -4,8 +4,9 @@ body {
 }
 
 :root {
-  --primary-color: #003B5C;
-  --secondary-color: #0084bd;
+  --primary-color: #005483;
+  --secondary-color: #0088bc;
+  --background-secondary: #E8EFEF;
   --pd60:60px;
   --pd30:30px;
 
@@ -32,6 +33,13 @@ background: linear-gradient(135deg, rgb(0, 59, 92) 12%, rgb(0, 150, 214));
   text-align: center;
   color:white;
 }
+
+.button{
+  border-radius: 6px;
+  cursor:pointer;
+  font-size:15px;
+}
+
 
 @media (max-width: 480px) {
 .container {

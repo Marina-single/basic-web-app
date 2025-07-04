@@ -1,5 +1,5 @@
 .contact-container {
-  background-color:#E5EBEE;
+  background-color:;
 
 }
 #contact-us{
@@ -15,7 +15,7 @@
 
 #contact-form {
   padding: 30px;
-  background-color: white;
+  background-color: var(--background-secondary);
 }
 
 label {
@@ -28,16 +28,16 @@ label {
 textarea {
   height:100px;
   width: 100%;
-  border: 1px solid #E5EBEE;
+  border: 1px solid  var(--background-secondary);
   border-radius: 4px;
-  background-color: #E5EBEE;
+  background-color: white;
 }
 
 input {
   width: 100%;
-  border: 1px solid #E5EBEE;
+  border: 1px solid  var(--background-secondary);
   border-radius: 4px;
-  background-color: #E5EBEE;
+  background-color: white;
   height: 40px;
 }
 
@@ -49,11 +49,9 @@ button {
   float:right;
   padding: 6px 40px;
   border: none;
-  border-radius: 6px;
   color:white;
-  background-color: var(--primary-color);
-  cursor: pointer;
-}
+  background:var(--primary-color)
+ }
 
 button:hover{
   background-color: var(--secondary-color);

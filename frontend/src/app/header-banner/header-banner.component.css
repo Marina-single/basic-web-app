@@ -16,41 +16,13 @@
 .info-title {
   color:white;
   font-size:60px;
-  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
   text-transform: uppercase;
   letter-spacing: 3px;
   font-weight: 600;
   padding-bottom:20px;
 
 }
-
-.info-button{
-  cursor:pointer;
-  border-radius: 6px;
-  color:white;
-  padding: 10px 60px;
-  font-size:15px;
-  position: relative;
-}
-
-.info-button::after{
-
-  display:inline-block;
-  content: '>';
-  position: absolute;
-  opacity: 0;
-  transition: all 0.4s ease-in-out;
-  right: 20px;
-  left: auto;
-
-}
-
-.info-button:hover::after {
-  opacity: 1;
-  right: 15px;
-
-}
-
 
 .contact-form {
   position: absolute;
@@ -61,19 +33,15 @@
   border-radius: 15px;
   box-shadow: 0 0 30px;
   overflow: hidden;
-  width: 370px;
+  width: 250px;
   max-width: 100%;
-
-
 }
 
 .form-titel{
   color: #000;
   font-size: 20px;
   font-weight: 600;
-  padding-left:20px;
-  padding-top:10px;
-  padding-bottom:10px;
+  padding: 6px 0px 6px 16px;
   background-color: #f1f1f1;
   text-align:left;
   text-transform: uppercase;
@@ -82,75 +50,51 @@
 
 .form-option{
   display: flex;
-  gap:15px;
+  gap:12px;
   flex-direction: column;
-  padding:20px;
+  padding:12px 16px;
 }
 
 a{
   text-decoration: none;
 }
 
+.info-button{
+  color:white;
+  padding: 10px 60px;
+  position: relative;
+  background:var(--secondary-color);
+}
+
+.info-button:hover,
+.button1:hover,
+.button2:hover {
+   background-color: var(--primary-color);
+}
+
+.button2:hover {
+   color:white;
+}
+
 .button1 {
   border: none;
-  border-radius: 6px;
   color:white;
-   padding: 8px 0px 8px 0px;
+  padding: 6px 0px 6px 0px;
   position: relative;
-  cursor:pointer;
   z-index: 12;
-  font-size:15px;
-  background:var(--primary-color);
+  background:var(--secondary-color);
  }
 
-.button1::after{
-
-  display:inline-block;
-  content: '>';
-  position: absolute;
-  opacity: 0;
-  transition: all 0.4s ease-in-out;
-  right: 20px;
-  left: auto;
-
-}
-
-.button1:hover::after {
-  opacity: 1;
-  right: 20px;
-
-}
 
 .button2 {
    border: 2px solid var(--primary-color);
-   border-radius: 6px;
    color:white;
-   padding: 8px 0px 8px 0px;
+   padding: 6px 0px 6px 0px;
    position: relative;
    color:var(--primary-color);
-   cursor:pointer;
    z-index: 12;
-   font-size:15px;
 
  }
-
-.button2::after{
-
-  display:inline-block;
-  content: '>';
-  position: absolute;
-  opacity: 0;
-  transition: all 0.4s ease-in-out;
-  right: 20px;
-  left: auto;
-
-}
-
-.button2:hover::after {
-  opacity: 1;
-  right: 20px;
-
-}
 
 .carousel-container {
     overflow: hidden;
@@ -163,24 +107,26 @@ a{
 
 @media (max-width: 1200px) {
   .contact-form {
-    width: 250px;
+    width: 200px;
     top: 73%;
     left: 85%;
     transform: translate(-85%, -73%);
   }
   .contact-form .form-titel {
-    font-size: 16px;
-    padding: 5px 50px;
+    font-size: 14px;
+    padding: 4px 0px 4px 16px;
     }
 
   .contact-form .form-option {
-    padding: 15px;
-    gap: 10px;
+    padding:8px 12px;
+    gap: 8px;
   }
   .button1,
   .button2 {
-     font-size: 13px;
-     padding: 6px 50px;
+     font-size: 12px;
+     padding: 6px 16px;
+     text-align:left;
+
   }
 
   .info-position{
@@ -243,6 +189,7 @@ a{
     width: 100%;
     font-size: 14px;
     padding: 8px 30px;
+
   }
 
   .contact-form .form-titel {

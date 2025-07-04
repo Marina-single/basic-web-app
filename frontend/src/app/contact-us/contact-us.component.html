@@ -36,7 +36,7 @@
         <label for="message">{{ 'CONTACT_US_MESSAGE' | translate }}</label>
         <textarea id="message" name="message" [(ngModel)]="user.message"></textarea>
       </div>
-        <button type="submit" [disabled]="!contactForm.form.valid">{{ 'Send' | translate }}</button>
+        <button class="button" type="submit" [disabled]="!contactForm.form.valid">{{ 'Send' | translate }}</button>
        <p class="error-msg" *ngIf="errorMessage">{{ errorMessage }}</p>
        <p class="success-msg" *ngIf="successMessage">{{ successMessage }}</p>
        <!--

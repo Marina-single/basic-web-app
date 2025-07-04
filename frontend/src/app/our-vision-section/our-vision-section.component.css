@@ -4,22 +4,12 @@
 }
 
 .info-container{
-  padding-top:27px;
-  padding-bottom: 15px;
+  padding-top:var(--pd30);
+  padding-bottom: var(--pd30);
 }
 
-
-hr {
-  width: 30%;
-  margin:auto;
-  background-color: var(--secondary-color);
-  height: 2px;
-  border: none;
-}
-
-.our-vision-container{
- padding-bottom: var(--pd30);
-
+.our-vision-container {
+  padding-top:var(--pd30);
 }
 
 .item {

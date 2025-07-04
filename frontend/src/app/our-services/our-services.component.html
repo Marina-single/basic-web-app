@@ -1,19 +1,21 @@
 <div class="our-services-container">
+  <div class="container p-0">
   <div class=" marked">{{ 'OUR_SERVICES' | translate }}</div>
-  <div class="row text-center all-services">
-    <div *ngFor="let service of services" class="col-md-6 mb-4">
-      <div class="card h-100">
+  <div class="row text-center all-services g-4">
+    <div *ngFor="let service of services" class="col-12 col-md-4">
+      <div class="h-100">
         <div
-          class="card-body d-flex flex-column flex-md-row align-items-center align-items-md-start text-center text-md-start">
+          class=" d-flex flex-column flex-md-row align-items-center align-items-md-start text-md-start">
           <i [class]="service.icon" class="services-icon"></i>
           <div style="padding-top: 8px;">
-            <h5 class="card-title">{{ service.title | translate }}</h5>
+            <div class="service-title">{{ service.title | translate }}</div>
             <p class="card-text text-start text-md-start subtitle">{{ service.subtitle | translate }}</p>
             <p class="card-text text-start text-md-start">{{ service.description | translate }}</p>
           </div>
         </div>
       </div>
     </div>
+  </div>
   </div>
 </div>
 

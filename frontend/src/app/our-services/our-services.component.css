@@ -1,5 +1,8 @@
-.our-services-container{
-padding-top:var(--pd30);
+.our-services-container {
+  padding-top:var(--pd30);
+  padding-bottom:var(--pd30);
+  background-color: var(--background-secondary);
+
 }
 
 .marked{
@@ -7,12 +10,13 @@ padding-top:var(--pd30);
   font-size: 20px;
 }
 
-.card {
-  border: none;
-}
 
-.card-title {
-  font-size: 25px;
+.service-title {
+  font-size: 20px;
+  color: var(--primary-color);
+  font-weight: 600;
+
+
 }
 
 .card-text {
@@ -21,13 +25,10 @@ padding-top:var(--pd30);
 }
 
 .subtitle{
-  font-weight: bold;
-  color:var(--secondary-color);
+   color: var(--primary-color);
 }
 
 .all-services{
-  padding-left: 45px;
-  padding-right: 45px;
   margin-right: auto;
   margin-left: auto;
   max-width: 1320px;
@@ -38,7 +39,7 @@ padding-top:var(--pd30);
 
 .services-icon {
   font-size: 2.25em;
-  color: var(--secondary-color);
+  color: var(--primary-color);
   margin-right: 0px;
 }
 

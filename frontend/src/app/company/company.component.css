@@ -13,11 +13,6 @@
   color: var(--primary-color);
 }
 
-
-.advantage{
-  background-color: var(--background-secondary);
-}
-
 .title{
   color: var(--primary-color);
   font-size:20px;

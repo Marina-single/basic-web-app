@@ -3,7 +3,7 @@
 
 }
 #contact-us{
-  padding-top:1em;
+  padding-top: var(--pd30);
 }
 
 .parent {

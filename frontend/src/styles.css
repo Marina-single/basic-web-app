@@ -39,7 +39,9 @@ background: linear-gradient(135deg, rgb(0, 59, 92) 12%, rgb(0, 150, 214));
   cursor:pointer;
   font-size:15px;
 }
-
+.background-secondary {
+   background-color: var(--background-secondary);
+}
 
 @media (max-width: 480px) {
 .container {

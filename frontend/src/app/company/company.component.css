@@ -4,10 +4,6 @@
   padding-bottom: var(--pd30);
 }
 
-.icon-wrapper{
-  padding-bottom:10px;
-}
-
 .icon-wrapper i {
   font-size: 3rem;
   color: var(--primary-color);
@@ -21,6 +17,9 @@
 
 .description{
   text-align: left;
+}
+.stat-item{
+  padding-right:16px;
 }
 
 @media (max-width: 1000px) {

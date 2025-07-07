@@ -62,10 +62,7 @@ export class HeaderComponent {
     }, 300);
   }
 
-  toggleLanguage() {
-    const newLang = this.currentLanguage === 'en' ? 'de' : 'en';
-    this.switchLanguage(newLang);
-  }
+
   switchLanguage(language: string) {
     this.translate.use(language);
     this.currentLanguage = language;

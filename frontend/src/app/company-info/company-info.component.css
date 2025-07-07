@@ -1,5 +1,8 @@
-.info{
-  padding-top: var(--pd30);
-  padding-bottom: 15px;
+.container{
+  padding-bottom: var(--pd30);
   text-align: left;
+}
+
+.info{
+  margin-bottom: 1rem;
 }

@@ -42,7 +42,6 @@ i {
 
 
 .navbar-nav {
-  margin-right:60px;
   color: black;
 }
 
@@ -66,15 +65,12 @@ i {
 
 .dropdown-item {
   padding: 6px 20px;
+  color:black;
 }
 
 .nav-item.dropdown:hover .dropdown-menu {
   display: block;
   margin-top: 0;
-}
-
-.language-toggle{
-  cursor:pointer;
 }
 
 

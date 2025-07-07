@@ -1,8 +1,8 @@
 .info-position{
   position: absolute;
   top: 50%;
-  left:15%;
-  transform: translate(-15%, -50%);
+  left:7%;
+  transform: translate(-7%, -50%);
 
 }
 .info-container{
@@ -26,9 +26,9 @@
 
 .contact-form {
   position: absolute;
-  top: 73%;
+  top: 52%;
   left:85%;
-  transform: translate(-85%, -73%);
+  transform: translate(-85%, -52%);
   background-color: white;
   border-radius: 15px;
   box-shadow: 0 0 30px;
@@ -108,9 +108,9 @@ a{
 @media (max-width: 1200px) {
   .contact-form {
     width: 200px;
-    top: 73%;
+    top: 50%;
     left: 85%;
-    transform: translate(-85%, -73%);
+    transform: translate(-85%, -50%);
   }
   .contact-form .form-titel {
     font-size: 14px;

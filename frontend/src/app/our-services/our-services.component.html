@@ -3,6 +3,7 @@
   <div class=" marked">{{ 'OUR_SERVICES' | translate }}</div>
   <div class="row text-center all-services g-4">
     <div *ngFor="let service of services" class="col-12 col-md-4">
+      <a [routerLink]="service.link" class="text-decoration-none text-dark">
       <div class="services-card">
         <div
           class=" d-flex flex-column flex-md-row align-items-center align-items-md-start text-md-start">
@@ -14,6 +15,7 @@
           </div>
         </div>
       </div>
+      </a>
     </div>
   </div>
   </div>

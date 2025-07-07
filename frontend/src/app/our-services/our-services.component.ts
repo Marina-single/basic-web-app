@@ -24,42 +24,52 @@ services = [
         icon: 'bi bi-house-door',
         title: 'HOME_SEARCH',
         subtitle: 'HOME_SEARCH_TITLE_SUBTITLE',
-        description: 'HOME_SEARCH_DESC'
+        description: 'HOME_SEARCH_DESC',
+        link: '/homesearch'
     },
 
     {
       icon: 'bi bi-passport',
       title: 'IMMIGRATION',
       subtitle: 'IMMIGRATION_SUBTITLE',
-      description: 'IMMIGRATION_DESC'
+      description: 'IMMIGRATION_DESC',
+      link: '/immigration'
+
     },
 
     {
          icon: 'bi  bi-geo-alt',
          title: 'SETTLING_IN',
          subtitle: 'SETTLING_IN_SUBTITLE',
-         description:'SETTLING_IN_DESC'
+         description:'SETTLING_IN_DESC',
+         link: '/settle-in'
+
     },
 
     {
         icon: 'bi bi-people',
         title: 'FAMILY_SUPPORT',
         subtitle: 'FAMILY_SUPPORT_SUBTITLE',
-        description: 'FAMILY_SUPPORT_DESC'
+        description: 'FAMILY_SUPPORT_DESC',
+        link: '/family-support'
+
     },
 
     {
       icon: 'bi bi-person-check',
       title: 'INDIVIDUAL_NEEDS',
       subtitle: 'INDIVIDUAL_NEEDS_SUBTITLE',
-      description: 'INDIVIDUAL_NEEDS_DESC'
+      description: 'INDIVIDUAL_NEEDS_DESC',
+      link: '/individual-needs'
+
     },
 
     {
       icon: 'bi bi-globe',
       title: 'CULTURAL_SUPPORT',
       subtitle: 'INTERCULTURAL_SUBTITLE',
-      description:'INTERCULTURAL_DESC'
+      description:'INTERCULTURAL_DESC',
+      link: '/intercultural-service'
     }
 
   ];

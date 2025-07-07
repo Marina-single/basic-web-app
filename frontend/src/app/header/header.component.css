@@ -58,9 +58,10 @@ i {
 }
 
 .dropdown-menu {
-  cursor:pointer;
+  cursor: pointer;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.15);
-  border:none;
+  border: none;
+  min-width: fit-content;
 }
 
 .dropdown-item {

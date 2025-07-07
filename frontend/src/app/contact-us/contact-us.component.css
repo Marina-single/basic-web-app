@@ -1,7 +1,7 @@
 .contact-container {
-  background-color:;
-
+  background-color: var(--background-secondary);
 }
+
 #contact-us{
   padding-top: var(--pd30);
 }
@@ -15,7 +15,7 @@
 
 #contact-form {
   padding: 30px;
-  background-color: var(--background-secondary);
+  background-color: white;
 }
 
 label {
@@ -28,16 +28,16 @@ label {
 textarea {
   height:100px;
   width: 100%;
-  border: 1px solid  var(--background-secondary);
+  border: 1px solid  var(--secondary-color);
   border-radius: 4px;
-  background-color: white;
+  background-color: var(--background-secondary);
 }
 
 input {
   width: 100%;
-  border: 1px solid  var(--background-secondary);
+  border: 1px solid  var(--secondary-color);
   border-radius: 4px;
-  background-color: white;
+  background-color: var(--background-secondary);
   height: 40px;
 }
 
@@ -50,17 +50,16 @@ button {
   padding: 6px 40px;
   border: none;
   color:white;
-  background:var(--primary-color)
+  background:var(--secondary-color)
  }
 
 button:hover{
-  background-color: var(--secondary-color);
+  background-color: var(--primary-color);
 }
 
 #email-phone-address {
   padding:30px;
   color: white;
-
 }
 
 .contact-element {
@@ -95,9 +94,9 @@ button:hover{
 }
 
 .error-msg {
-  color: var(--primary-color);
+  color: red;
   font-size: 14px;
-  margin-top: 10px;
+  margin-top: 0px;
   text-align: center;
 }
 
@@ -113,7 +112,6 @@ textarea.ng-invalid.ng-touched {
   border: 1px solid var(--secondary-color);
   background-color: #fff5f5;
 }
-
 
 
 @media (min-width: 900px) {

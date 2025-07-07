@@ -33,7 +33,7 @@
       </div >
 
       <div class="contact-el">
-        <label for="message">{{ 'CONTACT_US_MESSAGE' | translate }}</label>
+        <label for="message">{{ 'CONTACT_US_MESSAGE' | translate }}:</label>
         <textarea id="message" name="message" [(ngModel)]="user.message"></textarea>
       </div>
         <button class="button" type="submit" [disabled]="!contactForm.form.valid">{{ 'Send' | translate }}</button>

@@ -19,18 +19,19 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 })
 export class OurServicesComponent {
 services = [
+
+    {
+        icon: 'bi bi-house-door',
+        title: 'HOME_SEARCH',
+        subtitle: 'HOME_SEARCH_TITLE_SUBTITLE',
+        description: 'HOME_SEARCH_DESC'
+    },
+
     {
       icon: 'bi bi-passport',
       title: 'IMMIGRATION',
       subtitle: 'IMMIGRATION_SUBTITLE',
       description: 'IMMIGRATION_DESC'
-    },
-
-    {
-        icon: 'bi bi-people',
-        title: 'FAMILY_SUPPORT',
-        subtitle: 'FAMILY_SUPPORT_SUBTITLE',
-        description: 'FAMILY_SUPPORT_DESC'
     },
 
     {
@@ -41,10 +42,17 @@ services = [
     },
 
     {
-        icon: 'bi bi-house-door',
-        title: 'HOME_SEARCH',
-        subtitle: 'HOME_SEARCH_TITLE_SUBTITLE',
-        description: 'HOME_SEARCH_DESC'
+        icon: 'bi bi-people',
+        title: 'FAMILY_SUPPORT',
+        subtitle: 'FAMILY_SUPPORT_SUBTITLE',
+        description: 'FAMILY_SUPPORT_DESC'
+    },
+
+    {
+      icon: 'bi bi-person-check',
+      title: 'INDIVIDUAL_NEEDS',
+      subtitle: 'INDIVIDUAL_NEEDS_SUBTITLE',
+      description: 'INDIVIDUAL_NEEDS_DESC'
     },
 
     {
@@ -52,13 +60,8 @@ services = [
       title: 'CULTURAL_SUPPORT',
       subtitle: 'INTERCULTURAL_SUBTITLE',
       description:'INTERCULTURAL_DESC'
-    },
-    {
-      icon: 'bi bi-person-check',
-      title: 'INDIVIDUAL_NEEDS',
-      subtitle: 'INDIVIDUAL_NEEDS_SUBTITLE',
-      description: 'INDIVIDUAL_NEEDS_DESC'
     }
+
   ];
 
   constructor(public translate: TranslateService) {}

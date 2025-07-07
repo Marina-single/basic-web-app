@@ -22,10 +22,6 @@
 
 }
 
-.subtitle{
-   color: var(--primary-color);
-}
-
 .all-services{
   margin-right: auto;
   margin-left: auto;
@@ -33,6 +29,12 @@
   padding-top:var(--pd30);
 
 
+}
+
+.services-card{
+  background-color:var(--background-secondary);
+  padding:15px 15px;
+  border-radius: 20px;
 }
 
 .services-icon {

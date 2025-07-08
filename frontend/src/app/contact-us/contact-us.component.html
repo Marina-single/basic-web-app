@@ -1,8 +1,8 @@
 <div class="contact-container">
 <div class="container" >
-<h2 id="contact-us">{{ 'CONTACT_US' | translate }}</h2>
+  <h2 id="contact-us">{{ 'CONTACT_US' | translate }}</h2>
 
-   <div class="parent row">
+   <div class="contact-card row">
      <div id="contact-form" class="col-lg-8 col-md-12 col-12">
      <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
       <div class="contact-el">
@@ -33,7 +33,7 @@
       </div >
 
       <div class="contact-el">
-        <label for="message">{{ 'CONTACT_US_MESSAGE' | translate }}:</label>
+        <label for="message">{{ 'CONTACT_US_MESSAGE' | translate }}</label>
         <textarea id="message" name="message" [(ngModel)]="user.message"></textarea>
       </div>
         <button class="button" type="submit" [disabled]="!contactForm.form.valid">{{ 'Send' | translate }}</button>
@@ -46,15 +46,15 @@
        -->
 
      </form>
-
-
      </div>
-     <div id="email-phone-address" class="col-lg-4 col-md-12 col-12 background-banner">
+
+     <div id="email-phone-address" class="col-lg-4 col-md-12 col-12">
       <div class="contact-element phone-number">+49 176 30430423</div>
       <div class="contact-element mail">info&#64;1source-relocation.de</div>
       <div class="contact-element address">Forsmannstrasse 10, 22303, Hamburg </div>
       <div class="support24"><i class="bi bi-clock support24" style="margin-right:4px;"> </i>24/7 Support </div>
      </div>
   </div>
+
 </div>
 </div>

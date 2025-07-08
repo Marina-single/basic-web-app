@@ -13,7 +13,7 @@ body {
 }
 
 .background-banner {
-background: linear-gradient(135deg, rgb(0, 59, 92) 12%, rgb(0, 150, 214));
+background: linear-gradient(to top, #0088bc, #61a4cc, #95c1dc, #c6deed, #f7fcff);
 }
 
 .marked{

@@ -1,6 +1,6 @@
 <div class="contact-container">
 <div class="container" >
-  <h2 id="contact-us">{{ 'CONTACT_US' | translate }}</h2>
+  <h2 class="marked">{{ 'CONTACT_US' | translate }}</h2>
 
    <div class="contact-card row">
      <div id="contact-form" class="col-lg-8 col-md-12 col-12">
@@ -22,15 +22,6 @@
         </div>
       </div>
 
-      <div class="contact-el">
-        <label for="number">{{ 'CONTACT_US_PHONE' | translate }}*:</label>
-        <input type="tel" id="number" name="number" [(ngModel)]="user.phone" required
-               #number="ngModel" pattern="^\+?\d{1,4}?[0-9]{7,15}$"
-               [ngClass]="{ 'invalid': number.invalid && number.touched }">
-        <div *ngIf="number.invalid && number.touched" class="error-msg">
-          {{ 'Please enter a valid phone number' | translate }}
-        </div>
-      </div >
 
       <div class="contact-el">
         <label for="message">{{ 'CONTACT_US_MESSAGE' | translate }}</label>
@@ -48,11 +39,17 @@
      </form>
      </div>
 
-     <div id="email-phone-address" class="col-lg-4 col-md-12 col-12">
+     <div id="email-phone-address" class="col-lg-4 col-md-12 col-12 g-md-3">
+
+       <div class="illustration-wrapper d-none d-lg-block mb-3">
+         <img src="assets/image/contact.png" alt="Contact illustration" class="illustration">
+       </div>
+       <div class ="contact-info">
       <div class="contact-element phone-number">+49 176 30430423</div>
       <div class="contact-element mail">info&#64;1source-relocation.de</div>
       <div class="contact-element address">Forsmannstrasse 10, 22303, Hamburg </div>
       <div class="support24"><i class="bi bi-clock support24" style="margin-right:4px;"> </i>24/7 Support </div>
+       </div>
      </div>
   </div>
 

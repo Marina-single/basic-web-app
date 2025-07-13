@@ -12,7 +12,7 @@
 }
 
 .contact-container{
-  background-color: var(--background-secondary)
+  background-color:
 }
 
 .contact-card {
@@ -140,4 +140,8 @@ textarea.ng-invalid.ng-touched {
   background-color: #fff5f5;
 }
 
-
+@media (max-width: 768px) {
+  .contact-card {
+    width:100%;
+  }
+}

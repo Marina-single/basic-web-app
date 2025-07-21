@@ -1,57 +1,55 @@
-<div  id ="contact-us" class="contact-container">
-<div class="container" >
-  <h2 class="marked">{{ 'CONTACT_US' | translate }}</h2>
+<div id="contact-us" class="contact-container">
+  <div class="container">
+    <h2 class="marked">{{ 'CONTACT_US' | translate }}</h2>
 
-   <div class="contact-card row">
-     <div id="contact-form" class="col-lg-8 col-md-12 col-12">
-     <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
-      <div class="contact-el">
-        <label for="name">{{ 'CONTACT_US_NAME' | translate }}*:</label>
-        <input type= "text" id="name" name="name" [(ngModel)]="user.name" required
-               #name="ngModel" [ngClass]="{ 'invalid': name.invalid && name.touched }">
-        <div *ngIf="name.invalid && name.touched" class="error-msg">
-          {{ 'Please enter your name' | translate }}
+    <div class="contact-card row">
+      <div id="contact-form" class="col-lg-8 col-md-12 col-12">
+        <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+
+          <div class="contact-el">
+            <label for="name">{{ 'CONTACT_US_NAME' | translate }}*:</label>
+            <input type="text" id="name" name="name" [(ngModel)]="user.name" required
+                   #name="ngModel" [ngClass]="{ 'invalid': name.invalid && name.touched }">
+            <div *ngIf="name.invalid && name.touched" class="error-msg">
+              {{ 'Please enter your name' | translate }}
+            </div>
+          </div>
+
+          <div class="contact-el">
+            <label for="email">{{ 'CONTACT_US_EMAIL' | translate }}*:</label>
+            <input type="email" id="email" name="email" [(ngModel)]="user.email" required
+                   #email="ngModel" [ngClass]="{ 'invalid': email.invalid && email.touched }">
+            <div *ngIf="email.invalid && email.touched" class="error-msg">
+              {{ 'Please enter a valid email' | translate }}
+            </div>
+          </div>
+
+          <div class="contact-el">
+            <label for="message">{{ 'CONTACT_US_MESSAGE' | translate }}:</label>
+            <textarea id="message" name="message" [(ngModel)]="user.message"></textarea>
+          </div>
+          <button class="button" type="submit" [disabled]="!contactForm.form.valid">{{ 'Send' | translate }}</button>
+          <p class="error-msg" *ngIf="errorMessage">{{ errorMessage }}</p>
+          <p class="success-msg" *ngIf="successMessage">{{ successMessage }}</p>
+          <!--
+          <p class="error-msg" *ngIf="contactForm.invalid && !contactForm.submitted">
+            {{ 'Please fill in all required fields.' | translate }}
+          </p>
+          -->
+        </form>
+      </div>
+
+      <div class="col-lg-4 col-md-12 col-12 g-md-3">
+        <div class="contact-info-wrapper">
+          <div class="contact-info">
+            <div class="contact-element phone-number">+49 176 30430423</div>
+            <div class="contact-element mail">info&#64;1source-relocation.de</div>
+            <div class="contact-element address">Forsmannstrasse 10, 22303, Hamburg</div>
+            <div class="support24"><i class="bi bi-clock support24"> </i>24/7 Support</div>
+          </div>
         </div>
       </div>
-      <div class="contact-el">
-        <label for="email">{{ 'CONTACT_US_EMAIL' | translate }}*:</label>
-        <input type="email" id="email" name="email" [(ngModel)]="user.email" required
-               #email="ngModel"  [ngClass]="{ 'invalid': email.invalid && email.touched }">
-        <div *ngIf="email.invalid && email.touched" class="error-msg">
-          {{ 'Please enter a valid email' | translate }}
-        </div>
-      </div>
+    </div>
 
-
-      <div class="contact-el">
-        <label for="message">{{ 'CONTACT_US_MESSAGE' | translate }}</label>
-        <textarea id="message" name="message" [(ngModel)]="user.message"></textarea>
-      </div>
-        <button class="button" type="submit" [disabled]="!contactForm.form.valid">{{ 'Send' | translate }}</button>
-       <p class="error-msg" *ngIf="errorMessage">{{ errorMessage }}</p>
-       <p class="success-msg" *ngIf="successMessage">{{ successMessage }}</p>
-       <!--
-       <p class="error-msg" *ngIf="contactForm.invalid && !contactForm.submitted">
-         {{ 'Please fill in all required fields.' | translate }}
-       </p>
-       -->
-
-     </form>
-     </div>
-
-     <div id="email-phone-address" class="col-lg-4 col-md-12 col-12 g-md-3">
-
-       <div class="illustration-wrapper d-none d-lg-block mb-3">
-         <img src="assets/image/contact.png" alt="Contact illustration" class="illustration">
-       </div>
-       <div class ="contact-info">
-      <div class="contact-element phone-number">+49 176 30430423</div>
-      <div class="contact-element mail">info&#64;1source-relocation.de</div>
-      <div class="contact-element address">Forsmannstrasse 10, 22303, Hamburg </div>
-      <div class="support24"><i class="bi bi-clock support24" style="margin-right:4px;"> </i>24/7 Support </div>
-       </div>
-     </div>
   </div>
-
-</div>
 </div>

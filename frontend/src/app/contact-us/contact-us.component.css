@@ -13,7 +13,7 @@
   overflow: hidden;
   background-color: white;
   padding:30px;
-  width:60%;
+  width:52%;
   margin: 0 auto;
   border: 1px solid #D3D3D3;
   border-radius: 20px;
@@ -51,7 +51,7 @@ input {
 
 button {
   float:left;
-  padding: 5px 25px;
+  padding: 6px 40px;
   border: none;
   color:white;
   background:var(--secondary-color)

@@ -1,8 +1,6 @@
 .container{
-  padding-bottom: var(--pd30);
+  padding-bottom: var(--pd60);
   text-align: left;
 }
 
-.info{
-  margin-bottom: 1rem;
-}
+

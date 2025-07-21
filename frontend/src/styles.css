@@ -12,10 +12,6 @@ body {
 
 }
 
-.background-banner {
-background: linear-gradient(to top, #0088bc, #61a4cc, #95c1dc, #c6deed, #f7fcff);
-}
-
 .marked{
   font-weight: bold;
   color:var(--primary-color);
@@ -40,10 +36,14 @@ background: linear-gradient(to top, #0088bc, #61a4cc, #95c1dc, #c6deed, #f7fcff)
   cursor:pointer;
   font-size:15px;
 }
+
 .background-secondary {
    background-color: var(--background-secondary);
 }
 
+.space-between-text{
+   margin-bottom: 1rem;
+ }
 @media (max-width: 480px) {
 .container {
    padding-left: 20px  !important;

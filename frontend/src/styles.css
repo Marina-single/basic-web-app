@@ -26,6 +26,7 @@ background: linear-gradient(to top, #0088bc, #61a4cc, #95c1dc, #c6deed, #f7fcff)
     padding-top:30px;
     padding-bottom:30px;
     height:130px;
+    background-color: var(--primary-color);
 }
 
 

@@ -22,7 +22,7 @@ body {
     padding-top:30px;
     padding-bottom:30px;
     height:130px;
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color);
 }
 
 
@@ -43,7 +43,15 @@ body {
 
 .space-between-text{
    margin-bottom: 1rem;
- }
+}
+
+@media (min-width: 1240px){
+.container {
+    max-width: 1240px !important;
+    }
+}
+
+
 @media (max-width: 480px) {
 .container {
    padding-left: 20px  !important;

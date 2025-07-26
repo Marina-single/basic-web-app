@@ -16,13 +16,13 @@ const transporter = nodemailer.createTransport({
 });
 
 app.post('/send-email', (req, res) => {
-  const { name, email, phone, message } = req.body;
+  const { name, email, message } = req.body;
 
   const mailOptions = {
     from: email,
     to: 'marysprt6@gmail.com',
     subject: `New Contact Form Submission from ${name}`,
-    text: `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nMessage: ${message}`
+    text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`
   };
 
   transporter.sendMail(mailOptions, (error, info) => {

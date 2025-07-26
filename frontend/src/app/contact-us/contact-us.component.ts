@@ -25,7 +25,6 @@ export class ContactUsComponent {
   user = {
     name: '',
     email: '',
-    phone: '',
     message: ''
   };
 

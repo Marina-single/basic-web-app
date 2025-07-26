@@ -1,9 +1,10 @@
 <div id="contact-us" class="contact-container">
-  <div class="container">
+  <div>
     <h2 class="marked">{{ 'CONTACT_US' | translate }}</h2>
 
     <div class="contact-card row">
-      <div id="contact-form" class="col-lg-8 col-md-12 col-12">
+      <div id="contact-form" class="col-lg-8 col-md-7 col-sm-7 col-12">
+
         <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
 
           <div class="contact-el">
@@ -26,7 +27,8 @@
 
           <div class="contact-el">
             <label for="message">{{ 'CONTACT_US_MESSAGE' | translate }}:</label>
-            <textarea id="message" name="message" [(ngModel)]="user.message"></textarea>
+            <textarea id="message" name="message" [(ngModel)]="user.message" (input)="adjustHeight($event)">
+            </textarea>
           </div>
           <button class="button" type="submit" [disabled]="!contactForm.form.valid">{{ 'Send' | translate }}</button>
           <p class="error-msg" *ngIf="errorMessage">{{ errorMessage }}</p>
@@ -39,12 +41,21 @@
         </form>
       </div>
 
-      <div class="col-lg-4 col-md-12 col-12 g-md-3">
+      <div class="col-lg-4 col-md-5 col-sm-7 col-12">
         <div class="contact-info-wrapper">
           <div class="contact-info">
-            <div class="contact-element phone-number">+49 176 30430423</div>
-            <div class="contact-element mail">info&#64;1source-relocation.de</div>
-            <div class="contact-element address">Forsmannstrasse 10, 22303, Hamburg</div>
+            <div class="contact-element phone-number tooltip-wrapper" (click)="copy('+49 176 30430423', 0)">+49 176 30430423
+              <span class="tooltip-text" [class.visible]="copiedIndex === 0">Copied!</span>
+            </div>
+
+            <div class="contact-element mail tooltip-wrapper" (click)="copy('info@1source-relocation.de', 1)">info&#64;1source-relocation.de
+              <span class="tooltip-text" [class.visible]="copiedIndex === 1">Copied!</span>
+            </div>
+
+            <div class="contact-element address tooltip-wrapper" (click)="copy('Forsmannstrasse 10, 22303, Hamburg', 2)">Forsmannstrasse 10, 22303, Hamburg
+              <span class="tooltip-text" [class.visible]="copiedIndex === 2">Copied!</span>
+            </div>
+
             <div class="support24"><i class="bi bi-clock support24"> </i>24/7 Support</div>
           </div>
         </div>

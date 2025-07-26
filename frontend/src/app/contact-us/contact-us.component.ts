@@ -28,6 +28,23 @@ export class ContactUsComponent {
     message: ''
   };
 
+  copiedIndex: number | null = null;
+
+  copy(text: string, index: number) {
+    navigator.clipboard.writeText(text).then(() => {
+      this.copiedIndex = index;
+      setTimeout(() => {
+        this.copiedIndex = null;
+      }, 2000);
+    });
+  }
+
+  adjustHeight(event: Event) {
+    const target = event.target as HTMLTextAreaElement;
+    target.style.height = 'auto'; // сбрасываем высоту
+    target.style.height = target.scrollHeight + 'px'; // задаём нужную
+  }
+
   constructor(private http: HttpClient) {}
 
   onSubmit(form: NgForm) {

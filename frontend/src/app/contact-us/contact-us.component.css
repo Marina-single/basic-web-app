@@ -4,7 +4,7 @@
   font-size: 20px;
 }
 
-.container{
+.contact-container{
   padding-bottom: var(--pd60);
 
 }
@@ -31,18 +31,25 @@ label {
 textarea {
   border: none;
   width: 80%;
-  border-bottom: 1px solid  #D3D3D3;
+  border-bottom: 1px solid #D3D3D3;
   border-radius: 4px;
   height: 30px;
   resize: none;
+  max-height: 66%;
 }
 
 input {
   border: none;
   width: 80%;
-  border-bottom: 1px solid  #D3D3D3;
+  border-bottom: 1px solid #D3D3D3;
   border-radius: 4px;
   height: 30px;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-bottom: 1px solid var(--primary-color);
 }
 
 .contact-el {
@@ -65,6 +72,7 @@ button:hover{
   display: flex;
   flex-direction: column;
   height:100%;
+
 }
 
 .contact-info {
@@ -74,6 +82,35 @@ button:hover{
 
 .contact-element {
   padding-bottom: 16px;
+  cursor:pointer;
+}
+
+.tooltip-wrapper {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.tooltip-text {
+  position: absolute;
+  top: -8px;
+  right: 50%;
+  color: var(--primary-color);
+  padding: 2px 10px;
+  border: 0.5px solid var(--secondary-color);
+  border-radius: 8px;
+  font-size: 12px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  transform: translateY(-50%);
+  z-index: 10;
+  font-weight:normal;
+
+}
+
+.tooltip-text.visible {
+  opacity: 1;
 }
 
 .phone-number {
@@ -83,7 +120,6 @@ button:hover{
 
 .mail{
   font-size: 14px;
-  text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 2px;
 
@@ -100,21 +136,21 @@ button:hover{
 }
 
 .error-msg {
-  color: red;
-  font-size: 14px;
+  color: #dc343b;
+  font-size: 12px;
   margin-top: 0px;
   text-align: left;
 }
 
 .success-msg {
   color: var(--primary-color);
-  font-size: 14px;
+  font-size: 12px;
   margin-top: 10px;
   text-align: center;
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 780px) {
   .contact-card {
     width:100%;
   }

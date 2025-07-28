@@ -21,6 +21,7 @@
   letter-spacing: 3px;
   font-weight: 600;
   padding-bottom:20px;
+
 }
 
 a{
@@ -47,6 +48,18 @@ a{
 }
 
 
+@media (max-width: 1200px) {
+
+  .info-title {
+    font-size: 40px;
+  }
+
+  .info-button{
+    padding: 10px 40px;
+  }
+
+}
+
 @media (max-width: 668px) {
   .info-position {
     top: 50%;
@@ -59,15 +72,17 @@ a{
   .info-container {
     align-items: center;
     text-align: center;
-    padding: 40px 20px;
   }
 
   .info-title {
-    font-size: 38px;
+    font-size: 25px;
+    padding-bottom:0px;
+    height: 60px;
   }
 
   .info-button {
-    padding: 8px 30px;
+    padding: 6px 20px;
+    font-size: 14px;
   }
 }
 

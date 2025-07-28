@@ -78,6 +78,7 @@ button:hover{
 .contact-info {
   display: flex;
   flex-direction: column;
+  overflow: visible;
 }
 
 .contact-element {
@@ -93,19 +94,21 @@ button:hover{
 
 .tooltip-text {
   position: absolute;
-  bottom: -20px;
-  right: 40%;
-  padding: 4px 20px;
+  bottom: -10px;
+  left: 0%;
+  padding: 4px 0px;
   background-color: #343434;
   color:white;
+  text-align:center;
   border-radius: 6px;
   font-size: 12px;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s ease;
-  transform: translateY(-40%);
+  transform: translateX(-0%);
   z-index: 10;
   font-weight:normal;
+  width:120px;
 
 }
 
@@ -160,9 +163,9 @@ button:hover{
   }
 
   .tooltip-text{
-    bottom: -25px;
-    right: 70%;
-    transform: translateY(-70%);
+    bottom: -20px;
+    left: 0%;
+    transform: translateX(-0%);
   }
 
 }

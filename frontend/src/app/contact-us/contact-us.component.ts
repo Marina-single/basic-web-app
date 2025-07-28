@@ -25,8 +25,10 @@ export class ContactUsComponent {
   user = {
     name: '',
     email: '',
+    phone: '',
     message: ''
   };
+
 
   copiedIndex: number | null = null;
 
@@ -41,10 +43,9 @@ export class ContactUsComponent {
 
   adjustHeight(event: Event) {
     const target = event.target as HTMLTextAreaElement;
-    target.style.height = 'auto'; // сбрасываем высоту
-    target.style.height = target.scrollHeight + 'px'; // задаём нужную
+    target.style.height = 'auto';
+    target.style.height = target.scrollHeight + 'px';
   }
-
   constructor(private http: HttpClient) {}
 
   onSubmit(form: NgForm) {

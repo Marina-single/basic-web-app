@@ -13,7 +13,7 @@
   overflow: hidden;
   background-color: white;
   padding:30px;
-  width:700px;
+  max-width: 60%;
   margin: 0 auto;
   border: 1px solid #D3D3D3;
   border-radius: 20px;
@@ -36,6 +36,7 @@ textarea {
   height: 30px;
   resize: none;
   max-height: 66%;
+  font-size: 14px;
 }
 
 input {
@@ -44,6 +45,7 @@ input {
   border-bottom: 1px solid #D3D3D3;
   border-radius: 4px;
   height: 30px;
+  font-size: 14px;
 }
 
 input:focus,
@@ -94,11 +96,11 @@ button:hover{
 
 .tooltip-text {
   position: absolute;
-  bottom: -10px;
+  bottom: -4px;
   left: 0%;
-  padding: 4px 0px;
   background-color: #343434;
   color:white;
+  padding: 2px 20px;
   text-align:center;
   border-radius: 6px;
   font-size: 12px;
@@ -108,7 +110,6 @@ button:hover{
   transform: translateX(-0%);
   z-index: 10;
   font-weight:normal;
-  width:120px;
 
 }
 
@@ -153,14 +154,13 @@ button:hover{
 }
 
 
-@media (max-width: 780px) {
-  .contact-card {
-    width:100%;
+@media (max-width: 992px) {
+  .contact-card{
+  max-width:75%;
   }
+}
 
-  .contact-info-wrapper{
-    padding-top:30px;
-  }
+@media (max-width: 770px) {
 
   .tooltip-text{
     bottom: -20px;
@@ -168,5 +168,15 @@ button:hover{
     transform: translateX(-0%);
   }
 
+  .contact-card{
+  max-width:80%;
+  }
+
 }
 
+@media (max-width: 576px) {
+  .contact-info-wrapper{
+  padding-top: 30px;
+  }
+
+}

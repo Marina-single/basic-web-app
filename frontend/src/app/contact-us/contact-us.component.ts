@@ -41,11 +41,19 @@ export class ContactUsComponent {
     });
   }
 
-  adjustHeight(event: Event) {
-    const target = event.target as HTMLTextAreaElement;
-    target.style.height = 'auto';
-    target.style.height = target.scrollHeight + 'px';
+adjustHeight(event: Event) {
+  const textarea = event.target as HTMLTextAreaElement;
+
+
+  textarea.style.height = '30px';
+
+
+  if (textarea.scrollHeight > textarea.clientHeight) {
+    textarea.style.height = textarea.scrollHeight + 'px';
   }
+}
+
+
   constructor(private http: HttpClient) {}
 
   onSubmit(form: NgForm) {

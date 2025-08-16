@@ -3,7 +3,7 @@
     <h2 class="marked">{{ 'CONTACT_US' | translate }}</h2>
 
     <div class="contact-card row">
-      <div id="contact-form" class="col-lg-8 col-md-7 col-sm-7 col-12">
+      <div id="contact-form" class="col-12 col-sm-8 col-md-8">
 
         <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
 
@@ -41,7 +41,7 @@
         </form>
       </div>
 
-      <div class="col-lg-4 col-md-5 col-sm-7 col-12">
+      <div class="col-lg-4 col-md-4 col-sm-4 col-12">
         <div class="contact-info-wrapper">
           <div class="contact-info">
             <div class="contact-element phone-number tooltip-wrapper" (click)="copy('+49 176 30430423', 0)">+49 176 30430423

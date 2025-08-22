@@ -5,7 +5,9 @@
 }
 
 .contact-container{
+  padding-top: var(--pd60);
   padding-bottom: var(--pd60);
+
 
 }
 

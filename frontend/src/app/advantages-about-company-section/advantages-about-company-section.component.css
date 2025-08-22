@@ -12,6 +12,10 @@
   padding-right:10px;
 }
 
+.container-style{
+  padding-bottom:var(--pd30);
+}
+
 
 @media (max-width: 1000px) {
 .icon-wrapper i {
